@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationLauncher", "ApplicationLauncher\ApplicationLauncher.csproj", "{B0CD16C2-F8C5-4442-8CDC-F2B58F380A41}"
 EndProject
@@ -28,6 +28,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISL.Ababil.Agent.Services.Communication", "MISL.Ababil.Agent.Services.Communication\MISL.Ababil.Agent.Services.Communication.csproj", "{ADE922CA-C5E1-4CEB-8535-712610CC8421}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISL.Ababil.Agent.Module.Security", "MISL.Ababil.Agent.Module.Security\MISL.Ababil.Agent.Module.Security.csproj", "{3F0E06DC-F910-4B0A-821A-6915B0C4FFCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.project", "Test.project\Test.project.csproj", "{75937A6F-8143-426C-B64B-98E436C888E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{3F0E06DC-F910-4B0A-821A-6915B0C4FFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F0E06DC-F910-4B0A-821A-6915B0C4FFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F0E06DC-F910-4B0A-821A-6915B0C4FFCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75937A6F-8143-426C-B64B-98E436C888E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75937A6F-8143-426C-B64B-98E436C888E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75937A6F-8143-426C-B64B-98E436C888E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75937A6F-8143-426C-B64B-98E436C888E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
