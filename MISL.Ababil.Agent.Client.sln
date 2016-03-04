@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISL.Ababil.Agent.Module.Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.project", "Test.project\Test.project.csproj", "{75937A6F-8143-426C-B64B-98E436C888E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{435B5353-FB42-448A-AC41-B1B440922C24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{75937A6F-8143-426C-B64B-98E436C888E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75937A6F-8143-426C-B64B-98E436C888E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75937A6F-8143-426C-B64B-98E436C888E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{435B5353-FB42-448A-AC41-B1B440922C24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{435B5353-FB42-448A-AC41-B1B440922C24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{435B5353-FB42-448A-AC41-B1B440922C24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{435B5353-FB42-448A-AC41-B1B440922C24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
