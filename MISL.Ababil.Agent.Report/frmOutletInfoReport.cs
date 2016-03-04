@@ -1,0 +1,306 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using MetroFramework.Forms;
+using MISL.Ababil.Agent.Infrastructure;
+using MISL.Ababil.Agent.Infrastructure.Models.common;
+using MISL.Ababil.Agent.Infrastructure.Models.domain.models;
+using MISL.Ababil.Agent.Infrastructure.Models.domain.models.agent;
+using MISL.Ababil.Agent.Infrastructure.Models.reports;
+using MISL.Ababil.Agent.Report.Properties;
+using MISL.Ababil.Agent.Services;
+using MISL.Ababil.Agent.Report.Reports;
+using CrystalDecisions.CrystalReports.Engine;
+using MISL.Ababil.Agent.LocalStorageService;
+
+namespace MISL.Ababil.Agent.Report
+{
+    public partial class frmOutletInfoReport : MetroForm
+    {
+        List<Division> _divisions;
+        List<District> _districts;
+        List<Thana> _cthanas;
+        List<AgentInformation> objAgentInfoList = new List<AgentInformation>();
+        AgentServices agentServices = new AgentServices();
+        AgentInformation agentInformation = new AgentInformation();
+        ServiceResult result;
+        List<OutletInfoReport> _outletInfoReportList = new List<OutletInfoReport>();
+
+        public frmOutletInfoReport()
+        {
+            InitializeComponent();
+
+            LoadSetupData();
+        }
+
+        private void LoadSetupData()
+        {
+            try
+            {
+
+
+
+
+                _divisions = LocalCache.GetDivisions();
+
+                BindingSource bsDivisionContact = new BindingSource();
+                bsDivisionContact.DataSource = _divisions;
+                _districts = LocalCache.GetDistricts();
+                BindingSource bsDistrict = new BindingSource();
+                bsDistrict.DataSource = _districts;
+
+
+                UtilityServices.fillComboBox(cmbDivision, bsDivisionContact, "name", "id");
+                cmbDivision.SelectedIndex = -1;
+
+
+
+
+
+                #region Fill Outlet Status
+                List<OutletStatusList> olStatusList = Enum.GetValues(typeof(OutletStatus)).Cast<OutletStatus>()
+                                                                                                .Select(s => new OutletStatusList
+                                                                                                {
+                                                                                                    OutletStatus = s.ToString(),
+                                                                                                }).ToList();
+                OutletStatusList allStatus = new OutletStatusList();
+                BindingSource bsStatus = new BindingSource();
+                allStatus.OutletStatus = "All";
+                olStatusList.Insert(0, allStatus);
+                bsStatus.DataSource = olStatusList;
+                UtilityServices.fillComboBox(cmbOutletStatus, bsStatus, "OutletStatus", "OutletStatus");
+                #endregion
+                #region Fill Agent List
+                objAgentInfoList = agentServices.getAgentInfoBranchWise();
+                BindingSource bsAgent = new BindingSource();
+                bsAgent.DataSource = objAgentInfoList;
+
+                AgentInformation agSelect = new AgentInformation();
+                agSelect.businessName = Resources.SetupData__Select_;
+                objAgentInfoList.Insert(0, agSelect);
+                AgentInformation agAll = new AgentInformation();
+                agAll.businessName = Resources.SetupData__All_;
+                objAgentInfoList.Insert(1, agAll);
+
+                UtilityServices.fillComboBox(cmbAgentName, bsAgent, "businessName", "id");
+                cmbAgentName.Text = "Select";
+                cmbAgentName.SelectedIndex = 0;
+                #endregion
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+        }
+
+        private void LoadOutletReportData()
+        {
+            OutletInfoReport outletInfoReportRow;
+            _outletInfoReportList = new List<OutletInfoReport>();
+
+            OutletReportSearchDto outletSearchDto = FillOutletReportSearchDto();
+            try
+            {
+                result = agentServices.getOutletInformationReportList(outletSearchDto);
+                if (result.Success)
+                {
+                    List<OutletReportDto> outletInfoResult = result.ReturnedObject as List<OutletReportDto>;
+                    if (outletInfoResult != null)
+                    {
+                        foreach (OutletReportDto outlet in outletInfoResult)
+                        {
+                            outletInfoReportRow = new OutletInfoReport();
+                            outletInfoReportRow.id = outlet.id;
+                            outletInfoReportRow.subAgentCode = outlet.subAgentCode;
+                            outletInfoReportRow.name = outlet.name;
+                            outletInfoReportRow.businessAddress = outlet.businessAddress;
+                            outletInfoReportRow.mobleNumber = outlet.mobleNumber;
+                            //outletInfoReportRow.creationDate = outlet.creationDate;
+                           // outletInfoReportRow.creationDate = outlet.creationDate.Replace("-", "/");
+                            outletInfoReportRow.creationDate = outlet.creationDate;
+                            outletInfoReportRow.status = outlet.status;
+                            outletInfoReportRow.agentId = outlet.agentId;
+                            outletInfoReportRow.agentCode = outlet.agentCode;
+                            outletInfoReportRow.agentName = outlet.agentName;
+
+                            _outletInfoReportList.Add(outletInfoReportRow);
+                        }
+                    }
+                }
+            }
+            catch (Exception exp)
+            { MessageBox.Show("Report data loading error.\n" + exp.Message); }
+        }
+        private OutletReportSearchDto FillOutletReportSearchDto()
+        {
+            OutletReportSearchDto outletSearchDto = new OutletReportSearchDto();
+            try
+            {
+                if (this.cmbAgentName.SelectedIndex <1)
+                
+                {
+                MessageBox.Show("Please select an Agent!", "Selection", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
+                
+                if (this.cmbAgentName.SelectedIndex > -1)
+                {
+                    if (cmbAgentName.SelectedIndex != 0 && cmbAgentName.SelectedIndex != 1)
+                    {
+                        outletSearchDto.agentId = (long)cmbAgentName.SelectedValue;
+                    }
+                    else if (cmbAgentName.SelectedIndex == 1 || cmbAgentName.SelectedIndex == 0)
+                    {
+                        outletSearchDto.agentId = 0;
+                    }
+                }
+
+                if (this.cmbDivision.SelectedIndex > -1)
+                {
+                    if (cmbDivision.SelectedIndex  >-1)
+                    {
+                        outletSearchDto.divisionId = long.Parse( cmbDivision.SelectedValue.ToString());
+                    }
+                }
+                else outletSearchDto.divisionId = 0;
+
+                if (this.cmbDistrict.SelectedIndex > -1)
+                {
+   
+                    outletSearchDto.districtId = long.Parse(cmbDistrict.SelectedValue.ToString());
+                }
+                else outletSearchDto.districtId = 0;
+
+                if (this.cmbUpazilla.SelectedIndex > -1)
+                {
+
+                    outletSearchDto.thanaId = long.Parse(cmbUpazilla.SelectedValue.ToString());
+                }
+                else outletSearchDto.thanaId = 0;
+
+                if (cmbOutletStatus.SelectedValue == "All") outletSearchDto.status = null;
+                else outletSearchDto.status = (OutletStatus)Enum.Parse(typeof(OutletStatus), cmbOutletStatus.SelectedValue.ToString());
+
+                return outletSearchDto;
+            }
+            catch (Exception exp)
+            { MessageBox.Show("Error filling search object.\n" + exp.Message); return null; }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnShowReport_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadOutletReportData();
+                crOutletInformationReport report = new crOutletInformationReport();
+                frmReportViewer viewer = new frmReportViewer();
+
+                ReportHeaders rptHeaders = new ReportHeaders();
+                rptHeaders = UtilityServices.getReportHeaders("Outlet Information Report");
+
+                TextObject txtBankName = report.ReportDefinition.ReportObjects["txtBankName"] as TextObject;
+                TextObject txtBranchName = report.ReportDefinition.ReportObjects["txtBranchName"] as TextObject;
+                TextObject txtBranchAddress = report.ReportDefinition.ReportObjects["txtBranchAddress"] as TextObject;
+                TextObject txtReportHeading = report.ReportDefinition.ReportObjects["txtReportHeading"] as TextObject;
+                TextObject txtPrintUser = report.ReportDefinition.ReportObjects["txtPrintUser"] as TextObject;
+                TextObject txtPrintDate = report.ReportDefinition.ReportObjects["txtPrintDate"] as TextObject;
+                //TextObject txtFromDate = report.ReportDefinition.ReportObjects["txtFromDate"] as TextObject;
+                // TextObject txtToDate = report.ReportDefinition.ReportObjects["txtToDate"] as TextObject;
+                if (rptHeaders != null)
+                {
+                    if (rptHeaders.branchDto != null)
+                    {
+                        txtBankName.Text = rptHeaders.branchDto.bankName;
+                        txtBranchName.Text = rptHeaders.branchDto.branchName;
+                        txtBranchAddress.Text = rptHeaders.branchDto.branchAddress;
+                    }
+                    txtReportHeading.Text = rptHeaders.reportHeading;
+                    txtPrintUser.Text = rptHeaders.printUser;
+                    txtPrintDate.Text = rptHeaders.printDate.ToString("dd/MM/yyyy").Replace("-", "/");
+                }
+
+                // txtFromDate.Text = dtpDateFrom.Date;
+                //txtToDate.Text = dtpDateTo.Date;
+
+
+
+                if (!result.Success)
+                {
+                    MessageBox.Show("Report data loading error.\n" + result.Message);
+                    return;
+                }
+
+                report.SetDataSource(_outletInfoReportList);
+                viewer.crvReportViewer.ReportSource = report;
+                viewer.ShowDialog(this.Parent);
+            }
+            catch (Exception exp)
+            { MessageBox.Show(exp.Message); }
+        }
+
+        private void cmbDivision_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox cb = (ComboBox)sender;
+            if (!cb.Focused)
+            {
+                return;
+            }
+
+            List<District> DistrictTmpContact = LocalCache.GetDistrictsByDivisionID(((Division)cmbDivision.SelectedItem).id);
+            BindingSource bsDistrictContact = new BindingSource();
+            bsDistrictContact.DataSource = DistrictTmpContact;
+            UtilityServices.fillComboBox(cmbDistrict, bsDistrictContact, "title", "id");
+            cmbDistrict.SelectedIndex = -1;
+            cmbUpazilla.SelectedIndex = -1;
+
+        }
+
+        private void cmbDistrict_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox cb = (ComboBox)sender;
+            if (!cb.Focused)
+            {
+                return;
+            }
+
+            long tmpIdContact = ((District)cmbDistrict.SelectedItem).id;
+            List<Thana> ThanaTmpContact = LocalCache.GetThanasByDistrictID(tmpIdContact);
+            BindingSource bsThanaContact = new BindingSource();
+            bsThanaContact.DataSource = ThanaTmpContact;
+            UtilityServices.fillComboBox(cmbUpazilla, bsThanaContact, "title", "id");
+            cmbUpazilla.SelectedIndex = -1;
+
+        }
+
+        private void cmbAgentName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+    public class OutletStatusList
+    {
+        public string OutletStatus { get; set; }
+    }
+    public class OutletInfoReport
+    {
+        public long id = 0;
+        public string subAgentCode = "";
+        public string name = "";
+        public string businessAddress = "";
+        public string mobleNumber = "";
+        public string creationDate="";
+        public string status = "";
+        public long agentId = 0;
+        public string agentCode = "";
+        public string agentName = "";
+    }
+}

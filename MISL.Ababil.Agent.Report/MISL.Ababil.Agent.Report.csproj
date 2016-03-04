@@ -1,0 +1,1012 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78F58AAC-36E4-4B75-89D9-43D41EBF81A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MISL.Ababil.Agent.Report</RootNamespace>
+    <AssemblyName>MISL.Ababil.Agent.Report</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MISL.Ababil.Agent.Report.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Winform.Metroframework.1.4.0\lib\net20\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Winform.Metroframework.Design.1.4.0\lib\net20\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Winform.Metroframework.Fonts.1.4.0\lib\net20\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSets\AccountBalanceReportData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountBalanceReportData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\AccountMiniStatement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountMiniStatement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\AccountOpeningReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountOpeningReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\AgentCashInformationDS.cs">
+      <DependentUpon>AgentCashInformationDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\AgentCashInformationDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentCashInformationDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\AgentDayEndSummaryDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentDayEndSummaryDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\AgentIncomeReportDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentIncomeReportDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\AgentIncomeStatementDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentIncomeStatementDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\BillPaymentDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillPaymentDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\CashRegister1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CashRegister.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\ImageDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImageDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\OutletCashDetailsDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OutletCashDetailsDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\OutletCashInfoDS.cs">
+      <DependentUpon>OutletCashInfoDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\OutletCashInfoDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OutletCashInfoDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\RamittanceRecordSearchReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RamittanceRecordSearchReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\RemittanceReportDataset.cs">
+      <DependentUpon>RemittanceReportDataset.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\RemittanceReportDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemittanceReportDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\TestDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\TransactionRecordDSForBranch.Designer.cs">
+      <DependentUpon>TransactionRecordDSForBranch.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DataSets\TransactionRecordDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionRecordDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgentCashInformationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgentCashInformationReport.Designer.cs">
+      <DependentUpon>frmAgentCashInformationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgentDayEndSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgentDayEndSummary.Designer.cs">
+      <DependentUpon>frmAgentDayEndSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccountMonitoringRport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountMonitoringRport.Designer.cs">
+      <DependentUpon>frmAccountMonitoringRport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgentInformationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgentInformationReport.Designer.cs">
+      <DependentUpon>frmAgentInformationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBillPaymentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBillPaymentReport.Designer.cs">
+      <DependentUpon>frmBillPaymentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmItdBalancOutstanding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItdBalancOutstanding.Designer.cs">
+      <DependentUpon>frmItdBalancOutstanding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOutletInfoReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOutletInfoReport.Designer.cs">
+      <DependentUpon>frmOutletInfoReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOutletUserInfoReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOutletUserInfoReport.Designer.cs">
+      <DependentUpon>frmOutletUserInfoReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransactionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransactionReport.Designer.cs">
+      <DependentUpon>frmTransactionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrMonitoringRport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrMonitoringRport.Designer.cs">
+      <DependentUpon>frmTrMonitoringRport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgentCommissionRport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgentCommissionRport.Designer.cs">
+      <DependentUpon>frmAgentCommissionRport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccountOpeningRport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountOpeningRport.Designer.cs">
+      <DependentUpon>frmAccountOpeningRport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccountWiseBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountWiseBalance.Designer.cs">
+      <DependentUpon>frmAccountWiseBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgentIncomeStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgentIncomeStatement.Designer.cs">
+      <DependentUpon>frmAgentIncomeStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCashRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCashRegister.Designer.cs">
+      <DependentUpon>frmCashRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDailyCashInCashOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDailyCashInCashOut.Designer.cs">
+      <DependentUpon>frmDailyCashInCashOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRemittanceRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRemittanceRecord.Designer.cs">
+      <DependentUpon>frmRemittanceRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowReport.Designer.cs">
+      <DependentUpon>frmShowReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransactionRecordForBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransactionRecordForBranch.Designer.cs">
+      <DependentUpon>frmTransactionRecordForBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransactionRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransactionRecord.Designer.cs">
+      <DependentUpon>frmTransactionRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\crAccountInfoAfterCreated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAccountInfoAfterCreated.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crAccountMonitoringReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAccountMonitoringReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crAccountOpenInformation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAccountOpenInformation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crAccountOpeningReportByDateRange_Eng.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAccountOpeningReportByDateRange_Eng.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crAccountWiseBalanceOnDate_Eng.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAccountWiseBalanceOnDate_Eng.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crAgentCashInformationReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAgentCashInformationReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crAgentCommissionInformation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAgentCommissionInformation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crAgentDayEndSummary.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAgentDayEndSummary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\cRAgentIncomeReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cRAgentIncomeReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crAgentIncomeStatement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAgentIncomeStatement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crAgentInformationReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAgentInformationReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crAgentTrMonitoring.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAgentTrMonitoring.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crBillPayment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBillPayment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\cRBillPaymentReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cRBillPaymentReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crBlankReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBlankReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crCashRegister.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCashRegister.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crDaillyCashInCashOut.cs">
+      <DependentUpon>crDaillyCashInCashOut.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crDailyCashInCashOut.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crDepositeInformation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crDepositeInformation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crITDAccountInfo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crITDAccountInfo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crITDBalanceOutstanding.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crITDBalanceOutstanding.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crMiniStatement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crMiniStatement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crMoneyTransfer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crMoneyTransfer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crMTD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crMTD.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\cROutletAllCashInformation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cROutletAllCashInformation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\cROutletCashDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cROutletCashDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\cROutletCashDetailsInfo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cROutletCashDetailsInfo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\cROutletCashInfo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cROutletCashInfo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\cROutletCashPayment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cROutletCashPayment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\cRoutletCashRecieve.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cRoutletCashRecieve.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crOutletInformationReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crOutletInformationReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crOutletUserInfoReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crOutletUserInfoReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crRemitence.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crRemitence.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crRemittanceRportSearchByDateRange.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crRemittanceRportSearchByDateRange.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crSSPAccountOpeningInformation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crSSPAccountOpeningInformation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crTransactionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crTransactionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crTransectionRecordByDateRange.cs">
+      <DependentUpon>crTransectionRecordByDateRange.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\crTransectionRecordByDateRangeForBranch.cs">
+      <DependentUpon>crTransectionRecordByDateRangeForBranch.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\crWithdraw.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crWithdraw.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportViewer.Designer.cs">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAgentCashInformationReport.resx">
+      <DependentUpon>frmAgentCashInformationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgentDayEndSummary.resx">
+      <DependentUpon>frmAgentDayEndSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccountMonitoringRport.resx">
+      <DependentUpon>frmAccountMonitoringRport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgentInformationReport.resx">
+      <DependentUpon>frmAgentInformationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBillPaymentReport.resx">
+      <DependentUpon>frmBillPaymentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItdBalancOutstanding.resx">
+      <DependentUpon>frmItdBalancOutstanding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOutletInfoReport.resx">
+      <DependentUpon>frmOutletInfoReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOutletUserInfoReport.resx">
+      <DependentUpon>frmOutletUserInfoReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransactionReport.resx">
+      <DependentUpon>frmTransactionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrMonitoringRport.resx">
+      <DependentUpon>frmTrMonitoringRport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgentCommissionRport.resx">
+      <DependentUpon>frmAgentCommissionRport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccountOpeningRport.resx">
+      <DependentUpon>frmAccountOpeningRport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccountWiseBalance.resx">
+      <DependentUpon>frmAccountWiseBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgentIncomeStatement.resx">
+      <DependentUpon>frmAgentIncomeStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCashRegister.resx">
+      <DependentUpon>frmCashRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDailyCashInCashOut.resx">
+      <DependentUpon>frmDailyCashInCashOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRemittanceRecord.resx">
+      <DependentUpon>frmRemittanceRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowReport.resx">
+      <DependentUpon>frmShowReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransactionRecordForBranch.resx">
+      <DependentUpon>frmTransactionRecordForBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransactionRecord.resx">
+      <DependentUpon>frmTransactionRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\crAccountInfoAfterCreated.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAccountInfoAfterCreated.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crAccountMonitoringReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAccountMonitoringReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crAccountOpenInformation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAccountOpenInformation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crAccountOpeningReportByDateRange_Eng.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAccountOpeningReportByDateRange_Eng.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crAccountWiseBalanceOnDate_Eng.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAccountWiseBalanceOnDate_Eng.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crAgentCashInformationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAgentCashInformationReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crAgentCommissionInformation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAgentCommissionInformation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crAgentDayEndSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAgentDayEndSummary.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\cRAgentIncomeReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cRAgentIncomeReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crAgentIncomeStatement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAgentIncomeStatement.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crAgentInformationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAgentInformationReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crAgentTrMonitoring.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAgentTrMonitoring.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crBillPayment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBillPayment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\cRBillPaymentReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cRBillPaymentReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crBlankReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBlankReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crCashRegister.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCashRegister.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crDaillyCashInCashOut.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crDaillyCashInCashOut.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crDepositeInformation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crDepositeInformation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crITDAccountInfo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crITDAccountInfo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crITDBalanceOutstanding.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crITDBalanceOutstanding.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crMiniStatement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crMiniStatement.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crMoneyTransfer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crMoneyTransfer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crMTD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crMTD.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\cROutletAllCashInformation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cROutletAllCashInformation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\cROutletCashDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cROutletCashDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\cROutletCashDetailsInfo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cROutletCashDetailsInfo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\cROutletCashInfo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cROutletCashInfo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\cROutletCashPayment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cROutletCashPayment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\cRoutletCashRecieve.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cRoutletCashRecieve.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crOutletInformationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crOutletInformationReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crOutletUserInfoReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crOutletUserInfoReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crRemitence.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crRemitence.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crRemittanceRportSearchByDateRange.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crRemittanceRportSearchByDateRange.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crSSPAccountOpeningInformation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crSSPAccountOpeningInformation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crTransactionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTransactionReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crTransectionRecordByDateRange.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTransectionRecordByDateRange.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crTransectionRecordByDateRangeForBranch.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTransectionRecordByDateRangeForBranch.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crWithdraw.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crWithdraw.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportViewer.resx">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSets\AccountBalanceReportData.xsc">
+      <DependentUpon>AccountBalanceReportData.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\AccountBalanceReportData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccountBalanceReportData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\AccountBalanceReportData.xss">
+      <DependentUpon>AccountBalanceReportData.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\AccountMiniStatement.xsc">
+      <DependentUpon>AccountMiniStatement.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\AccountMiniStatement.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccountMiniStatement.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\AccountMiniStatement.xss">
+      <DependentUpon>AccountMiniStatement.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\AccountOpeningReport.xsc">
+      <DependentUpon>AccountOpeningReport.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\AccountOpeningReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccountOpeningReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\AccountOpeningReport.xss">
+      <DependentUpon>AccountOpeningReport.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\AgentCashInformationDS.xsc">
+      <DependentUpon>AgentCashInformationDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\AgentCashInformationDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AgentCashInformationDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\AgentCashInformationDS.xss">
+      <DependentUpon>AgentCashInformationDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\AgentDayEndSummaryDS.xsc">
+      <DependentUpon>AgentDayEndSummaryDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\AgentDayEndSummaryDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AgentDayEndSummaryDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\AgentDayEndSummaryDS.xss">
+      <DependentUpon>AgentDayEndSummaryDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\AgentIncomeReportDS.xsc">
+      <DependentUpon>AgentIncomeReportDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\AgentIncomeReportDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AgentIncomeReportDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\AgentIncomeReportDS.xss">
+      <DependentUpon>AgentIncomeReportDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\AgentIncomeStatementDS.xsc">
+      <DependentUpon>AgentIncomeStatementDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\AgentIncomeStatementDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AgentIncomeStatementDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\AgentIncomeStatementDS.xss">
+      <DependentUpon>AgentIncomeStatementDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\BillPaymentDS.xsc">
+      <DependentUpon>BillPaymentDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\BillPaymentDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BillPaymentDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\BillPaymentDS.xss">
+      <DependentUpon>BillPaymentDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\CashRegister.xsc">
+      <DependentUpon>CashRegister.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\CashRegister.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CashRegister1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\CashRegister.xss">
+      <DependentUpon>CashRegister.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\ImageDS.xsc">
+      <DependentUpon>ImageDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\ImageDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ImageDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\ImageDS.xss">
+      <DependentUpon>ImageDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\OutletCashDetailsDS.xsc">
+      <DependentUpon>OutletCashDetailsDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\OutletCashDetailsDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OutletCashDetailsDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\OutletCashDetailsDS.xss">
+      <DependentUpon>OutletCashDetailsDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\OutletCashInfoDS.xsc">
+      <DependentUpon>OutletCashInfoDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\OutletCashInfoDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OutletCashInfoDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\OutletCashInfoDS.xss">
+      <DependentUpon>OutletCashInfoDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\RamittanceRecordSearchReport.xsc">
+      <DependentUpon>RamittanceRecordSearchReport.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\RamittanceRecordSearchReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RamittanceRecordSearchReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\RamittanceRecordSearchReport.xss">
+      <DependentUpon>RamittanceRecordSearchReport.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\RemittanceReportDataset.xsc">
+      <DependentUpon>RemittanceReportDataset.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\RemittanceReportDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RemittanceReportDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\RemittanceReportDataset.xss">
+      <DependentUpon>RemittanceReportDataset.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\TestDS.xsc">
+      <DependentUpon>TestDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\TestDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TestDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\TestDS.xss">
+      <DependentUpon>TestDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\TransactionRecordDSForBranch.xsc">
+      <DependentUpon>TransactionRecordDSForBranch.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\TransactionRecordDSForBranch.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransactionRecordDSForBranch.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\TransactionRecordDSForBranch.xss">
+      <DependentUpon>TransactionRecordDSForBranch.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\TransactionRecordDS.xsc">
+      <DependentUpon>TransactionRecordDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\TransactionRecordDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransactionRecordDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\TransactionRecordDS.xss">
+      <DependentUpon>TransactionRecordDS.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Communication\MISL.Ababil.Agent.Communication.csproj">
+      <Project>{4a112df8-0f10-4623-9bfd-6ae95cb009cb}</Project>
+      <Name>MISL.Ababil.Agent.Communication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.CustomControls\MISL.Ababil.Agent.CustomControls.csproj">
+      <Project>{3CF54D1D-F05C-48BB-99FB-DDC564062F7A}</Project>
+      <Name>MISL.Ababil.Agent.CustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Infrastructure\MISL.Ababil.Agent.Infrastructure.csproj">
+      <Project>{235DEEE9-CF49-4C53-9189-D8C3A8D68B7B}</Project>
+      <Name>MISL.Ababil.Agent.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.LocalStorageService\MISL.Ababil.Agent.LocalStorageService.csproj">
+      <Project>{22f41a2c-ffc7-4897-b712-4ce2e09db9ab}</Project>
+      <Name>MISL.Ababil.Agent.LocalStorageService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Module.Common\MISL.Ababil.Agent.Module.Common.csproj">
+      <Project>{5c34fbb4-8810-4454-b76f-cc460de2d812}</Project>
+      <Name>MISL.Ababil.Agent.Module.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Services\MISL.Ababil.Agent.Services.csproj">
+      <Project>{24B15C56-93E6-48BD-86E0-A825A49004F9}</Project>
+      <Name>MISL.Ababil.Agent.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

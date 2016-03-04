@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AccountMiniStatement" targetNamespace="http://tempuri.org/AccountMiniStatement.xsd" xmlns:mstns="http://tempuri.org/AccountMiniStatement.xsd" xmlns="http://tempuri.org/AccountMiniStatement.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AccountMiniStatement" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AccountMiniStatement" msprop:Generator_UserDSName="AccountMiniStatement">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AccountMiniStatementDT" msprop:Generator_TableClassName="AccountMiniStatementDTDataTable" msprop:Generator_TableVarName="tableAccountMiniStatementDT" msprop:Generator_TablePropName="AccountMiniStatementDT" msprop:Generator_RowDeletingName="AccountMiniStatementDTRowDeleting" msprop:Generator_RowChangingName="AccountMiniStatementDTRowChanging" msprop:Generator_RowEvHandlerName="AccountMiniStatementDTRowChangeEventHandler" msprop:Generator_RowDeletedName="AccountMiniStatementDTRowDeleted" msprop:Generator_UserTableName="AccountMiniStatementDT" msprop:Generator_RowChangedName="AccountMiniStatementDTRowChanged" msprop:Generator_RowEvArgName="AccountMiniStatementDTRowChangeEvent" msprop:Generator_RowClassName="AccountMiniStatementDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="txnSerial" msprop:Generator_ColumnVarNameInTable="columntxnSerial" msprop:Generator_ColumnPropNameInRow="txnSerial" msprop:Generator_ColumnPropNameInTable="txnSerialColumn" msprop:Generator_UserColumnName="txnSerial" type="xs:long" minOccurs="0" />
+              <xs:element name="txnDate" msprop:Generator_ColumnVarNameInTable="columntxnDate" msprop:Generator_ColumnPropNameInRow="txnDate" msprop:Generator_ColumnPropNameInTable="txnDateColumn" msprop:Generator_UserColumnName="txnDate" type="xs:string" minOccurs="0" />
+              <xs:element name="txnNarration" msprop:Generator_ColumnVarNameInTable="columntxnNarration" msprop:Generator_ColumnPropNameInRow="txnNarration" msprop:Generator_ColumnPropNameInTable="txnNarrationColumn" msprop:Generator_UserColumnName="txnNarration" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="trAmount" msprop:Generator_ColumnVarNameInTable="columntrAmount" msprop:Generator_ColumnPropNameInRow="trAmount" msprop:Generator_ColumnPropNameInTable="trAmountColumn" msprop:Generator_UserColumnName="trAmount" type="xs:string" default="0" minOccurs="0" />
+              <xs:element name="txnNumber" msprop:Generator_ColumnVarNameInTable="columntxnNumber" msprop:Generator_ColumnPropNameInRow="txnNumber" msprop:Generator_ColumnPropNameInTable="txnNumberColumn" msprop:Generator_UserColumnName="txnNumber" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="txnPostBalance" msprop:Generator_ColumnVarNameInTable="columntxnPostBalance" msprop:Generator_ColumnPropNameInRow="txnPostBalance" msprop:Generator_ColumnPropNameInTable="txnPostBalanceColumn" msprop:Generator_UserColumnName="txnPostBalance" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="instrumentNumber" msprop:Generator_ColumnVarNameInTable="columninstrumentNumber" msprop:Generator_ColumnPropNameInRow="instrumentNumber" msprop:Generator_ColumnPropNameInTable="instrumentNumberColumn" msprop:Generator_UserColumnName="instrumentNumber" type="xs:string" default="0" minOccurs="0" />
+              <xs:element name="drAmount" msprop:Generator_ColumnVarNameInTable="columndrAmount" msprop:Generator_ColumnPropNameInRow="drAmount" msprop:Generator_ColumnPropNameInTable="drAmountColumn" msprop:Generator_UserColumnName="drAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="crAmount" msprop:Generator_ColumnVarNameInTable="columncrAmount" msprop:Generator_ColumnPropNameInRow="crAmount" msprop:Generator_ColumnPropNameInTable="crAmountColumn" msprop:Generator_UserColumnName="crAmount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

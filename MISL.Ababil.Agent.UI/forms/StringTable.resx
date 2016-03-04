@@ -1,0 +1,682 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAdd" xml:space="preserve">
+    <value>Add</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="btnCancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>frmLogin</comment>
+  </data>
+  <data name="btnCaptureFingerPrint" xml:space="preserve">
+    <value>Capture Fingerprint</value>
+    <comment>frmUserCreate</comment>
+  </data>
+  <data name="btnChange" xml:space="preserve">
+    <value>Change</value>
+    <comment>frmSubAgent</comment>
+  </data>
+  <data name="btnClear" xml:space="preserve">
+    <value>Clear</value>
+    <comment>all form</comment>
+  </data>
+  <data name="btnClose" xml:space="preserve">
+    <value>Close</value>
+    <comment>all form</comment>
+  </data>
+  <data name="btnDeposit" xml:space="preserve">
+    <value>Deposit</value>
+    <comment>frmCashDeposit</comment>
+  </data>
+  <data name="btnDotransfer" xml:space="preserve">
+    <value>Do Transfer</value>
+    <comment>frmFundTransfer</comment>
+  </data>
+  <data name="btnLogin" xml:space="preserve">
+    <value>Login</value>
+    <comment>frmLogin</comment>
+  </data>
+  <data name="btnNewUser" xml:space="preserve">
+    <value>New User</value>
+    <comment>frmSubAgent</comment>
+  </data>
+  <data name="btnSave" xml:space="preserve">
+    <value>Save</value>
+    <comment>all form</comment>
+  </data>
+  <data name="btnSearch" xml:space="preserve">
+    <value>Search</value>
+    <comment>frmPendingApplication</comment>
+  </data>
+  <data name="btnShow" xml:space="preserve">
+    <value>Show6</value>
+    <comment>frmAccountStatement</comment>
+  </data>
+  <data name="btnShowBalance" xml:space="preserve">
+    <value>Show Balance</value>
+    <comment>frmBalanceInquiry</comment>
+  </data>
+  <data name="btnShowReport" xml:space="preserve">
+    <value>Show Report</value>
+    <comment>frmAccountStatement</comment>
+  </data>
+  <data name="btnShowStatement" xml:space="preserve">
+    <value>Show Statement</value>
+    <comment>frmMiniStatement</comment>
+  </data>
+  <data name="btnWithdraw" xml:space="preserve">
+    <value>Withdraw</value>
+    <comment>frmCashWithdraw</comment>
+  </data>
+  <data name="frmAccountCreation" xml:space="preserve">
+    <value>Account Creation</value>
+    <comment>frmAccountCreation</comment>
+  </data>
+  <data name="frmAccountStatement" xml:space="preserve">
+    <value>Account Statement6</value>
+    <comment>frmAccountStatement</comment>
+  </data>
+  <data name="frmAgentinfo" xml:space="preserve">
+    <value>Agent Information</value>
+    <comment>frmAgent</comment>
+  </data>
+  <data name="frmBalanceInquiry" xml:space="preserve">
+    <value>Balance Inquiry6</value>
+    <comment>frmBalanceInquiry</comment>
+  </data>
+  <data name="frmCashDeposit" xml:space="preserve">
+    <value>Cash Deposit</value>
+    <comment>frmCashDeposit</comment>
+  </data>
+  <data name="frmCashWithdraw" xml:space="preserve">
+    <value>Cash Withdraw</value>
+    <comment>frmCashWithdraw</comment>
+  </data>
+  <data name="frmConsumerCreation" xml:space="preserve">
+    <value>Consumer Creation</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="frmFundTransfer" xml:space="preserve">
+    <value>Fund Transfer</value>
+    <comment>frmFundTransfer</comment>
+  </data>
+  <data name="frmLogin" xml:space="preserve">
+    <value>Login Information</value>
+    <comment>frmLogin</comment>
+  </data>
+  <data name="frmMiniStatement" xml:space="preserve">
+    <value>Mini Statement</value>
+    <comment>frmMiniStatement</comment>
+  </data>
+  <data name="frmPendingApplication" xml:space="preserve">
+    <value>Pending Application </value>
+    <comment>frmPendingApplication</comment>
+  </data>
+  <data name="frmSubAgent" xml:space="preserve">
+    <value>Sub Agent </value>
+    <comment>frmSubAgent</comment>
+  </data>
+  <data name="frmUserCreate" xml:space="preserve">
+    <value>User Create</value>
+    <comment>frmUserCreate</comment>
+  </data>
+  <data name="g" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gpbAccountCreationInfo" xml:space="preserve">
+    <value>Account Information</value>
+    <comment>frmAccountCreation</comment>
+  </data>
+  <data name="gpbAccountStatementInfo" xml:space="preserve">
+    <value>Account Statement Info</value>
+    <comment>frmAccountStatement</comment>
+  </data>
+  <data name="gpbNomineeDetails" xml:space="preserve">
+    <value>Nominee Details</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="gpbPendingApplication" xml:space="preserve">
+    <value>Pending Application </value>
+    <comment>frmPendingApplication</comment>
+  </data>
+  <data name="gpbSearchInfo" xml:space="preserve">
+    <value>Search Information </value>
+    <comment>frmPendingApplication</comment>
+  </data>
+  <data name="grpSubAgentInfo" xml:space="preserve">
+    <value>Sub Agent Information</value>
+    <comment>frmSubAgent</comment>
+  </data>
+  <data name="gvAccountInfo" xml:space="preserve">
+    <value />
+    <comment>frmAccountCreation</comment>
+  </data>
+  <data name="gvAmount" xml:space="preserve">
+    <value>Amount</value>
+    <comment>frmMiniStatement</comment>
+  </data>
+  <data name="gvBalance" xml:space="preserve">
+    <value>Balance</value>
+    <comment>frmMiniStatement</comment>
+  </data>
+  <data name="gvDelete" xml:space="preserve">
+    <value>Delete </value>
+    <comment>frmAccountCreation</comment>
+  </data>
+  <data name="gvEdit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>frmSubAgent</comment>
+  </data>
+  <data name="gvId" xml:space="preserve">
+    <value>ID</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="gvMiniStatement" xml:space="preserve">
+    <value />
+    <comment>frmMiniStatement</comment>
+  </data>
+  <data name="gvMobileNo" xml:space="preserve">
+    <value>Mobile No.</value>
+    <comment>frmPendingApplication</comment>
+  </data>
+  <data name="gvName" xml:space="preserve">
+    <value>Name</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="gvNartion" xml:space="preserve">
+    <value>Naration</value>
+    <comment>frmMiniStatement</comment>
+  </data>
+  <data name="gvNationalId" xml:space="preserve">
+    <value>National ID</value>
+    <comment>frmPendingApplication</comment>
+  </data>
+  <data name="gvNomineeDetails" xml:space="preserve">
+    <value />
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="gvNomineeName" xml:space="preserve">
+    <value>Nominee Name </value>
+    <comment>frmAccountCreation</comment>
+  </data>
+  <data name="gvOtherInstruction" xml:space="preserve">
+    <value>Other Instruction</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="gvPendingApplication" xml:space="preserve">
+    <value />
+    <comment>frmPendingApplication</comment>
+  </data>
+  <data name="gvPercentage" xml:space="preserve">
+    <value>Percentage </value>
+    <comment>frmAccountCreation</comment>
+  </data>
+  <data name="gvReferecneNo" xml:space="preserve">
+    <value>Reference No.</value>
+    <comment>frmPendingApplication</comment>
+  </data>
+  <data name="gvRelation" xml:space="preserve">
+    <value>Rekation </value>
+    <comment>frmAccountCreation</comment>
+  </data>
+  <data name="gvRelationship" xml:space="preserve">
+    <value>Relationship</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="gvRemark" xml:space="preserve">
+    <value>Remark </value>
+    <comment>frmAccountCreation</comment>
+  </data>
+  <data name="gvSL" xml:space="preserve">
+    <value>SL</value>
+    <comment>frmMiniStatement</comment>
+  </data>
+  <data name="gvStatus" xml:space="preserve">
+    <value>Status</value>
+    <comment>frmSubAgent</comment>
+  </data>
+  <data name="gvSubAgentUserInfo" xml:space="preserve">
+    <value />
+    <comment>frmSubAgent</comment>
+  </data>
+  <data name="gvSubAgentUserInfoUserId" xml:space="preserve">
+    <value>User ID</value>
+    <comment>frmSubAgent</comment>
+  </data>
+  <data name="gvTransactionType" xml:space="preserve">
+    <value>Transaction Type</value>
+    <comment>frmMiniStatement</comment>
+  </data>
+  <data name="lblAccountNumber" xml:space="preserve">
+    <value>Account Number. :</value>
+    <comment>frmAccountStatement</comment>
+  </data>
+  <data name="lblAgentLocationTitle" xml:space="preserve">
+    <value>Agent/Business Location :</value>
+    <comment>frmAgent</comment>
+  </data>
+  <data name="lblAgnetAccountNo" xml:space="preserve">
+    <value>Agent Account No. :</value>
+    <comment>frmSubAgent</comment>
+  </data>
+  <data name="lblAgnetNameTitle" xml:space="preserve">
+    <value>Agent/Business Name :</value>
+    <comment>frmAgent</comment>
+  </data>
+  <data name="lblAmount" xml:space="preserve">
+    <value>Amount</value>
+    <comment>frmFundTransfer</comment>
+  </data>
+  <data name="lblConsumerAccount" xml:space="preserve">
+    <value>Consumer Account :</value>
+    <comment>frmCashWithdraw</comment>
+  </data>
+  <data name="lblConsumerAccountNo" xml:space="preserve">
+    <value>Consumer Account No. :</value>
+    <comment>frmMiniStatement</comment>
+  </data>
+  <data name="lblConsumerName" xml:space="preserve">
+    <value>Consumer Name :</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="lblConsumerTitle" xml:space="preserve">
+    <value>Consumer Title :</value>
+    <comment>frmCashWithdraw</comment>
+  </data>
+  <data name="lblConsutomerTitle" xml:space="preserve">
+    <value>Consumer Title :</value>
+    <comment>frmMiniStatement</comment>
+  </data>
+  <data name="lblCurrency" xml:space="preserve">
+    <value>Currency :</value>
+    <comment>frmAccountCreation</comment>
+  </data>
+  <data name="lblCustomerAccountNo" xml:space="preserve">
+    <value>Consumer Account No. :</value>
+  </data>
+  <data name="lblCustomerId" xml:space="preserve">
+    <value>Customer ID :</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="lblCustomerIdTitle" xml:space="preserve">
+    <value>Customer ID :</value>
+    <comment>frmAgent</comment>
+  </data>
+  <data name="lblEmail" xml:space="preserve">
+    <value>Email :</value>
+    <comment>all form</comment>
+  </data>
+  <data name="lblFromAccount" xml:space="preserve">
+    <value>From Account</value>
+    <comment>frmFundTransfer</comment>
+  </data>
+  <data name="lblFromAccountNameTitle" xml:space="preserve">
+    <value>From Account Name :</value>
+    <comment>frmFundTransfer</comment>
+  </data>
+  <data name="lblFromDate" xml:space="preserve">
+    <value>From :6</value>
+    <comment>frmAccountStatement</comment>
+  </data>
+  <data name="lblIndividualId" xml:space="preserve">
+    <value>Individual ID :</value>
+    <comment>frmAccountCreation</comment>
+  </data>
+  <data name="lblInstruction" xml:space="preserve">
+    <value>Instruction :</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="lblMobileNo" xml:space="preserve">
+    <value>Mobile :</value>
+    <comment>frmSubAgent</comment>
+  </data>
+  <data name="lblMobileNoTitle" xml:space="preserve">
+    <value>Mobile No. :</value>
+    <comment>frmAgent</comment>
+  </data>
+  <data name="lblNationalId" xml:space="preserve">
+    <value>National ID  :</value>
+    <comment>frmPendingApplication</comment>
+  </data>
+  <data name="lblNomineeName" xml:space="preserve">
+    <value>Nominee Name :</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="lblPassword" xml:space="preserve">
+    <value>Password :</value>
+    <comment>frmLogin</comment>
+  </data>
+  <data name="lblPercentage" xml:space="preserve">
+    <value>Percentage:</value>
+    <comment>frmAccountCreation</comment>
+  </data>
+  <data name="lblPicture" xml:space="preserve">
+    <value>Picture :</value>
+    <comment>frmSubAgent</comment>
+  </data>
+  <data name="lblProduct" xml:space="preserve">
+    <value>Product :</value>
+    <comment>frmAccountCreation</comment>
+  </data>
+  <data name="lblReferenceNo" xml:space="preserve">
+    <value>Reference No. :</value>
+    <comment>frmPendingApplication</comment>
+  </data>
+  <data name="lblRelation" xml:space="preserve">
+    <value>Relation :</value>
+    <comment>frmAccountCreation</comment>
+  </data>
+  <data name="lblRelationship" xml:space="preserve">
+    <value>Relationship :</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="lblRemark" xml:space="preserve">
+    <value>Remark :</value>
+    <comment>frmAccountCreation</comment>
+  </data>
+  <data name="lblShare" xml:space="preserve">
+    <value>Share(%) :</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="lblSubAgentLocation" xml:space="preserve">
+    <value>Sub Agent/Business Location  :</value>
+    <comment>frmSubAgent</comment>
+  </data>
+  <data name="lblSubAgentName" xml:space="preserve">
+    <value>Sub Agent/Business Nmae :</value>
+    <comment>frmSubAgent</comment>
+  </data>
+  <data name="lbltName" xml:space="preserve">
+    <value>Name :</value>
+    <comment>frmAccountStatement</comment>
+  </data>
+  <data name="lblToAccount" xml:space="preserve">
+    <value>To Account :</value>
+    <comment>frmFundTransfer</comment>
+  </data>
+  <data name="lblToAccountNameTitle" xml:space="preserve">
+    <value>To Account Name :</value>
+    <comment>frmFundTransfer</comment>
+  </data>
+  <data name="lblToDate" xml:space="preserve">
+    <value>To :</value>
+    <comment>frmAccountStatement</comment>
+  </data>
+  <data name="lblUsername" xml:space="preserve">
+    <value>User Name :</value>
+    <comment>frmLogin,frmUserCreate</comment>
+  </data>
+  <data name="tabFingerprintForConsumerCreation" xml:space="preserve">
+    <value>Fingerprint</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="tabGengralInfoForConsumerCreation" xml:space="preserve">
+    <value>General Information</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="tabNomineeInfoForConsumerCreation" xml:space="preserve">
+    <value>Nominee Information</value>
+    <comment>frmConsumerCreation</comment>
+  </data>
+  <data name="tabSubAgentGeneralInfo" xml:space="preserve">
+    <value>General Information </value>
+    <comment>frmSubAgent</comment>
+  </data>
+  <data name="tabSubAgentUserInfo" xml:space="preserve">
+    <value>User Information  </value>
+    <comment>frmSubAgent</comment>
+  </data>
+  <data name="Transaction_Profile_was_saved_successfully" xml:space="preserve">
+    <value>Transaction Profile was saved successfully</value>
+    <comment>Message when a transaction profile get saved.</comment>
+  </data>
+  <data name="SearchCriteriaTypeMap_Code" xml:space="preserve">
+    <value>Code</value>
+    <comment>Code option in Agent Search Criteria</comment>
+  </data>
+  <data name="SearchCriteriaTypeMap_Name" xml:space="preserve">
+    <value>Name</value>
+    <comment>Name option in Agent Search Criteria
+</comment>
+  </data>
+  <data name="SearchCriteriaTypeMap_Registration_Date" xml:space="preserve">
+    <value>Registration Date</value>
+    <comment>Registration Date option in Agent Search Criteria
+</comment>
+  </data>
+  <data name="SearchCriteriaTypeMap_Approval_Date" xml:space="preserve">
+    <value>Approval Date</value>
+    <comment>Approval Date option in Agent Search Criteria
+</comment>
+  </data>
+  <data name="SearchCriteriaTypeMap_Transaction_Status" xml:space="preserve">
+    <value>Transaction Status</value>
+    <comment>Transaction Status option in Agent Search Criteria
+</comment>
+  </data>
+  <data name="SearchCriteriaTypeMap_Approval_Status" xml:space="preserve">
+    <value>Approval Status</value>
+    <comment>Approval Status option in Agent Search Criteria
+</comment>
+  </data>
+  <data name="Please_provide_text_content_for_Agent_Code" xml:space="preserve">
+    <value>Please provide text content for Agent Code</value>
+    <comment>Text to prompt when text content for search was not provided.</comment>
+  </data>
+  <data name="Search_Content_Missing" xml:space="preserve">
+    <value>Search Content Missing</value>
+    <comment>Caption for Message box when search content misses out</comment>
+  </data>
+  <data name="Please_provide_text_content_for_Agent_Name" xml:space="preserve">
+    <value>Please provide text content for Agent Name</value>
+    <comment>Prompt to show when Agent Name missed out in search criteria</comment>
+  </data>
+  <data name="Branch_user_" xml:space="preserve">
+    <value>Branch user </value>
+  </data>
+  <data name="was_created_successfully" xml:space="preserve">
+    <value> was created successfully</value>
+  </data>
+  <data name="CreationFailedFor" xml:space="preserve">
+    <value> creation failed for the following reason:
+
+</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>Failure</value>
+  </data>
+  <data name="TheTwoPasswordsDoNotMatch" xml:space="preserve">
+    <value>
+The two passwords do not match</value>
+  </data>
+  <data name="ValidUserNameRequired" xml:space="preserve">
+    <value>
+A valid user name is required</value>
+  </data>
+  <data name="ValidPasswordRequired" xml:space="preserve">
+    <value>
+A valid password is required</value>
+  </data>
+  <data name="ValidFirstNameRequired" xml:space="preserve">
+    <value>
+A valid first name is required</value>
+  </data>
+  <data name="ValidLastNameRequired" xml:space="preserve">
+    <value>
+A valid last name is required</value>
+  </data>
+  <data name="PleaseCorrectTheFollowingInputErrors" xml:space="preserve">
+    <value>Please correct the following input errors:
+</value>
+  </data>
+  <data name="InputErrors" xml:space="preserve">
+    <value>Input error</value>
+  </data>
+  <data name="Numeric_value_is_expected" xml:space="preserve">
+    <value>A numeric value is expected</value>
+  </data>
+  <data name="Please_provide_the_SSP_Account_Number_" xml:space="preserve">
+    <value>Please provide the SSP Account Number.</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_resubmit_" xml:space="preserve">
+    <value>Are you sure you want to resubmit?</value>
+  </data>
+  <data name="frmSSPAccountOpening_btnSubmit_Click_Confirm_Resubmission" xml:space="preserve">
+    <value>Confirm Resubmission</value>
+  </data>
+  <data name="frmUpdater_InitiateUpdate_" xml:space="preserve">
+    <value>An update is available for your software. Please update to the latest version.
+
+Do you want to update now ?</value>
+  </data>
+  <data name="Update_Available" xml:space="preserve">
+    <value>Update Available</value>
+  </data>
+  <data name="Mandatory_Update_Message" xml:space="preserve">
+    <value>A mandatory update is required. You must update the software before you can continue. 
+
+ Do you want to update now ?</value>
+  </data>
+  <data name="Mandatory_update_available" xml:space="preserve">
+    <value>Mandatory update available</value>
+  </data>
+  <data name="Downloading_update_Label" xml:space="preserve">
+    <value>Downloading update: </value>
+  </data>
+  <data name="Download_Completed_" xml:space="preserve">
+    <value>Download of the software update has been completed. 
+
+Ababil Agent Banking will now terminate and installation will start.
+
+ Thank you for your kind patience.</value>
+  </data>
+  <data name="Download_Completed_Title" xml:space="preserve">
+    <value>Download Completed</value>
+  </data>
+  <data name="Thank_you_for_your_kind_patience_" xml:space="preserve">
+    <value>Thank you for your kind patience.</value>
+  </data>
+  <data name="Update_Available_Caption" xml:space="preserve">
+    <value>Update Available</value>
+  </data>
+</root>

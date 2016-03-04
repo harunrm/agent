@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ChequeRepuisitionDS" targetNamespace="http://tempuri.org/ChequeRepuisitionDS.xsd" xmlns:mstns="http://tempuri.org/ChequeRepuisitionDS.xsd" xmlns="http://tempuri.org/ChequeRepuisitionDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ChequeRepuisitionDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ChequeRepuisitionDS" msprop:Generator_UserDSName="ChequeRepuisitionDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ChequeRequisitionDT" msprop:Generator_TableClassName="ChequeRequisitionDTDataTable" msprop:Generator_TableVarName="tableChequeRequisitionDT" msprop:Generator_RowChangedName="ChequeRequisitionDTRowChanged" msprop:Generator_TablePropName="ChequeRequisitionDT" msprop:Generator_RowDeletingName="ChequeRequisitionDTRowDeleting" msprop:Generator_RowChangingName="ChequeRequisitionDTRowChanging" msprop:Generator_RowEvHandlerName="ChequeRequisitionDTRowChangeEventHandler" msprop:Generator_RowDeletedName="ChequeRequisitionDTRowDeleted" msprop:Generator_RowClassName="ChequeRequisitionDTRow" msprop:Generator_UserTableName="ChequeRequisitionDT" msprop:Generator_RowEvArgName="ChequeRequisitionDTRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="agentId" msprop:Generator_ColumnVarNameInTable="columnagentId" msprop:Generator_ColumnPropNameInRow="agentId" msprop:Generator_ColumnPropNameInTable="agentIdColumn" msprop:Generator_UserColumnName="agentId" type="xs:long" minOccurs="0" />
+              <xs:element name="agentName" msprop:Generator_ColumnVarNameInTable="columnagentName" msprop:Generator_ColumnPropNameInRow="agentName" msprop:Generator_ColumnPropNameInTable="agentNameColumn" msprop:Generator_UserColumnName="agentName" type="xs:string" minOccurs="0" />
+              <xs:element name="subAgentId" msprop:Generator_ColumnVarNameInTable="columnsubAgentId" msprop:Generator_ColumnPropNameInRow="subAgentId" msprop:Generator_ColumnPropNameInTable="subAgentIdColumn" msprop:Generator_UserColumnName="subAgentId" type="xs:long" minOccurs="0" />
+              <xs:element name="subAgentName" msprop:Generator_ColumnVarNameInTable="columnsubAgentName" msprop:Generator_ColumnPropNameInRow="subAgentName" msprop:Generator_ColumnPropNameInTable="subAgentNameColumn" msprop:Generator_UserColumnName="subAgentName" type="xs:string" minOccurs="0" />
+              <xs:element name="accountNumber" msprop:Generator_ColumnVarNameInTable="columnaccountNumber" msprop:Generator_ColumnPropNameInRow="accountNumber" msprop:Generator_ColumnPropNameInTable="accountNumberColumn" msprop:Generator_UserColumnName="accountNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="accountTitle" msprop:Generator_ColumnVarNameInTable="columnaccountTitle" msprop:Generator_ColumnPropNameInRow="accountTitle" msprop:Generator_ColumnPropNameInTable="accountTitleColumn" msprop:Generator_UserColumnName="accountTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="noOfLeaf" msprop:Generator_ColumnVarNameInTable="columnnoOfLeaf" msprop:Generator_ColumnPropNameInRow="noOfLeaf" msprop:Generator_ColumnPropNameInTable="noOfLeafColumn" msprop:Generator_UserColumnName="noOfLeaf" type="xs:int" minOccurs="0" />
+              <xs:element name="chequeDeliveryMedium" msprop:Generator_ColumnVarNameInTable="columnchequeDeliveryMedium" msprop:Generator_ColumnPropNameInRow="chequeDeliveryMedium" msprop:Generator_ColumnPropNameInTable="chequeDeliveryMediumColumn" msprop:Generator_UserColumnName="chequeDeliveryMedium" type="xs:anyType" minOccurs="0" />
+              <xs:element name="deliveryFrom" msprop:Generator_ColumnVarNameInTable="columndeliveryFrom" msprop:Generator_ColumnPropNameInRow="deliveryFrom" msprop:Generator_ColumnPropNameInTable="deliveryFromColumn" msprop:Generator_UserColumnName="deliveryFrom" type="xs:string" minOccurs="0" />
+              <xs:element name="requestDate" msprop:Generator_ColumnVarNameInTable="columnrequestDate" msprop:Generator_ColumnPropNameInRow="requestDate" msprop:Generator_ColumnPropNameInTable="requestDateColumn" msprop:Generator_UserColumnName="requestDate" type="xs:long" minOccurs="0" />
+              <xs:element name="chequeRequisitionStatus" msprop:Generator_ColumnVarNameInTable="columnchequeRequisitionStatus" msprop:Generator_ColumnPropNameInRow="chequeRequisitionStatus" msprop:Generator_ColumnPropNameInTable="chequeRequisitionStatusColumn" msprop:Generator_UserColumnName="chequeRequisitionStatus" type="xs:anyType" minOccurs="0" />
+              <xs:element name="subAgentCode" msprop:Generator_ColumnVarNameInTable="columnsubAgentCode" msprop:Generator_ColumnPropNameInRow="subAgentCode" msprop:Generator_ColumnPropNameInTable="subAgentCodeColumn" msprop:Generator_UserColumnName="subAgentCode" type="xs:string" minOccurs="0" />
+              <xs:element name="startingNo" msprop:Generator_ColumnVarNameInTable="columnstartingNo" msprop:Generator_ColumnPropNameInRow="startingNo" msprop:Generator_ColumnPropNameInTable="startingNoColumn" msprop:Generator_UserColumnName="startingNo" type="xs:string" minOccurs="0" />
+              <xs:element name="endingNo_x0020_" msprop:Generator_ColumnVarNameInTable="columnendingNo_" msprop:Generator_ColumnPropNameInRow="endingNo_" msprop:Generator_ColumnPropNameInTable="endingNo_Column" msprop:Generator_UserColumnName="endingNo " type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

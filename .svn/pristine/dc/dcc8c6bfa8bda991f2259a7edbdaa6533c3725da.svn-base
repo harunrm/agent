@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<repositories>
+  <repository path="..\ApplicationLauncher\packages.config" />
+  <repository path="..\MISL.Ababil.Agent.Communication\packages.config" />
+  <repository path="..\MISL.Ababil.Agent.Infrastructure\packages.config" />
+  <repository path="..\MISL.Ababil.Agent.LocalStorageService\packages.config" />
+  <repository path="..\MISL.Ababil.Agent.Services\packages.config" />
+  <repository path="..\MISL.Ababil.Agent.UI\packages.config" />
+</repositories>

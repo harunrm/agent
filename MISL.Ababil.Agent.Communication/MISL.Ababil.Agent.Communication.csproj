@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4A112DF8-0F10-4623-9BFD-6AE95CB009CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MISL.Ababil.Agent.Communication</RootNamespace>
+    <AssemblyName>MISL.Ababil.Agent.Communication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountBalanceReportCom.cs" />
+    <Compile Include="AccountInformationCom.cs" />
+    <Compile Include="AccountOpeningReportCom.cs" />
+    <Compile Include="AgentCom.cs" />
+    <Compile Include="BillPaymentCom.cs" />
+    <Compile Include="CashEntryCom.cs" />
+    <Compile Include="CashInformationCom.cs" />
+    <Compile Include="ChargeApplicabilityCom.cs" />
+    <Compile Include="ExchangeHouseSetupCom.cs" />
+    <Compile Include="MenuCom.cs" />
+    <Compile Include="CommunicationException.cs" />
+    <Compile Include="ConsumerCom.cs" />
+    <Compile Include="CustomerCom.cs" />
+    <Compile Include="DocumentCom.cs" />
+    <Compile Include="GatewayClient.cs" />
+    <Compile Include="IndividualCom.cs" />
+    <Compile Include="JsonCom.cs" />
+    <Compile Include="KycCom.cs" />
+    <Compile Include="LoginCom.cs" />
+    <Compile Include="NomineeCom.cs" />
+    <Compile Include="PasswordChangeCom.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemittanceCom.cs" />
+    <Compile Include="SpecialCom.cs" />
+    <Compile Include="TermAccountCom.cs" />
+    <Compile Include="SSPRequestSearchCom.cs" />
+    <Compile Include="SubAgentCom.cs" />
+    <Compile Include="TransactionCom.cs" />
+    <Compile Include="TransactionProfileCom.cs" />
+    <Compile Include="ConfigCom.cs" />
+    <Compile Include="TransactionProfileEditCom.cs" />
+    <Compile Include="UpdateCom.cs" />
+    <Compile Include="UserCom.cs" />
+    <Compile Include="UtilityCom.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Infrastructure\MISL.Ababil.Agent.Infrastructure.csproj">
+      <Project>{235deee9-cf49-4c53-9189-d8c3a8d68b7b}</Project>
+      <Name>MISL.Ababil.Agent.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

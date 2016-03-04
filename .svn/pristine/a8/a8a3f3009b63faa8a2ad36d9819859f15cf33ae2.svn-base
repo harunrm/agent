@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2D9A5B9-4C3F-4E43-9044-31D377185201}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MISL.Ababil.Agent.Module.ChequeRequisition</RootNamespace>
+    <AssemblyName>MISL.Ababil.Agent.Module.ChequeRequisition</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Winform.Metroframework.1.4.0\lib\net20\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Winform.Metroframework.Design.1.4.0\lib\net20\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Winform.Metroframework.Fonts.1.4.0\lib\net20\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSets\ChequeRepuisitionDS.cs">
+      <DependentUpon>ChequeRepuisitionDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\ChequeRepuisitionDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChequeRepuisitionDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChequeDeliveryMedium.cs" />
+    <Compile Include="Models\ChequeLeafConfig.cs" />
+    <Compile Include="Models\ChequeRequestDto.cs" />
+    <Compile Include="Models\ChequeRequestSearchDto.cs" />
+    <Compile Include="Models\ChequeRequestStatusChangeDto.cs" />
+    <Compile Include="Models\ChequeRequisitionInfo.cs" />
+    <Compile Include="Models\ChequeRequisitionSearchResultDto.cs" />
+    <Compile Include="Models\ChequeRequisitionStatus.cs" />
+    <Compile Include="Models\Report\ChequeRequisitionReportResultDto.cs" />
+    <Compile Include="Models\Report\ChequeRequisitionReportSearchDto.cs" />
+    <Compile Include="Models\UrgencyType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Report\crChequeRequisitionRegister.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crChequeRequisitionRegister.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\frmChequeDeliveryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmChequeDeliveryReport.Designer.cs">
+      <DependentUpon>frmChequeDeliveryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmChequeRequisitionInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmChequeRequisitionInformation.Designer.cs">
+      <DependentUpon>frmChequeRequisitionInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\StringTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringTable.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ChequeRequisitionService.cs" />
+    <Compile Include="UI\frmChequeRequisition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmChequeRequisition.Designer.cs">
+      <DependentUpon>frmChequeRequisition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmChequeRequisitionRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmChequeRequisitionRequest.Designer.cs">
+      <DependentUpon>frmChequeRequisitionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmChequeRequisitionSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmChequeRequisitionSearch.Designer.cs">
+      <DependentUpon>frmChequeRequisitionSearch.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSets\ChequeRepuisitionDS.xsc">
+      <DependentUpon>ChequeRepuisitionDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\ChequeRepuisitionDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChequeRepuisitionDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\ChequeRepuisitionDS.xss">
+      <DependentUpon>ChequeRepuisitionDS.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report\crChequeRequisitionRegister.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crChequeRequisitionRegister.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmChequeDeliveryReport.resx">
+      <DependentUpon>frmChequeDeliveryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmChequeRequisitionInformation.resx">
+      <DependentUpon>frmChequeRequisitionInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\StringTable.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringTable.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmChequeRequisition.resx">
+      <DependentUpon>frmChequeRequisition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmChequeRequisitionRequest.resx">
+      <DependentUpon>frmChequeRequisitionRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmChequeRequisitionSearch.resx">
+      <DependentUpon>frmChequeRequisitionSearch.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\err.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Communication\MISL.Ababil.Agent.Communication.csproj">
+      <Project>{4a112df8-0f10-4623-9bfd-6ae95cb009cb}</Project>
+      <Name>MISL.Ababil.Agent.Communication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.CustomControls\MISL.Ababil.Agent.CustomControls.csproj">
+      <Project>{3cf54d1d-f05c-48bb-99fb-ddc564062f7a}</Project>
+      <Name>MISL.Ababil.Agent.CustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Infrastructure\MISL.Ababil.Agent.Infrastructure.csproj">
+      <Project>{235deee9-cf49-4c53-9189-d8c3a8d68b7b}</Project>
+      <Name>MISL.Ababil.Agent.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Module.Common\MISL.Ababil.Agent.Module.Common.csproj">
+      <Project>{5c34fbb4-8810-4454-b76f-cc460de2d812}</Project>
+      <Name>MISL.Ababil.Agent.Module.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Report\MISL.Ababil.Agent.Report.csproj">
+      <Project>{78f58aac-36e4-4b75-89d9-43d41ebf81a3}</Project>
+      <Name>MISL.Ababil.Agent.Report</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Services\MISL.Ababil.Agent.Services.csproj">
+      <Project>{24b15c56-93e6-48bd-86e0-a825a49004f9}</Project>
+      <Name>MISL.Ababil.Agent.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxBIOPLUGINACTXLib">
+      <Guid>{73308679-FC6B-4482-8AD2-235AA8E75EBB}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="BIOPLUGINACTXLib">
+      <Guid>{73308679-FC6B-4482-8AD2-235AA8E75EBB}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AccountOpeningReport" targetNamespace="http://tempuri.org/AccountOpeningReport.xsd" xmlns:mstns="http://tempuri.org/AccountOpeningReport.xsd" xmlns="http://tempuri.org/AccountOpeningReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AccountOpeningReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AccountOpeningReport" msprop:Generator_UserDSName="AccountOpeningReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AccountOpenings" msprop:Generator_TableClassName="AccountOpeningsDataTable" msprop:Generator_TableVarName="tableAccountOpenings" msprop:Generator_TablePropName="AccountOpenings" msprop:Generator_RowDeletingName="AccountOpeningsRowDeleting" msprop:Generator_RowChangingName="AccountOpeningsRowChanging" msprop:Generator_RowEvHandlerName="AccountOpeningsRowChangeEventHandler" msprop:Generator_RowDeletedName="AccountOpeningsRowDeleted" msprop:Generator_UserTableName="AccountOpenings" msprop:Generator_RowChangedName="AccountOpeningsRowChanged" msprop:Generator_RowEvArgName="AccountOpeningsRowChangeEvent" msprop:Generator_RowClassName="AccountOpeningsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccountNumber" msprop:Generator_ColumnVarNameInTable="columnAccountNumber" msprop:Generator_ColumnPropNameInRow="AccountNumber" msprop:Generator_ColumnPropNameInTable="AccountNumberColumn" msprop:Generator_UserColumnName="AccountNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="AccountName" msprop:Generator_ColumnVarNameInTable="columnAccountName" msprop:Generator_ColumnPropNameInRow="AccountName" msprop:Generator_ColumnPropNameInTable="AccountNameColumn" msprop:Generator_UserColumnName="AccountName" type="xs:string" minOccurs="0" />
+              <xs:element name="OpeningDate" msprop:Generator_ColumnVarNameInTable="columnOpeningDate" msprop:Generator_ColumnPropNameInRow="OpeningDate" msprop:Generator_ColumnPropNameInTable="OpeningDateColumn" msprop:Generator_UserColumnName="OpeningDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ProductName" msprop:Generator_ColumnVarNameInTable="columnProductName" msprop:Generator_ColumnPropNameInRow="ProductName" msprop:Generator_ColumnPropNameInTable="ProductNameColumn" msprop:Generator_UserColumnName="ProductName" type="xs:string" minOccurs="0" />
+              <xs:element name="MobileNumber" msprop:Generator_ColumnVarNameInTable="columnMobileNumber" msprop:Generator_ColumnPropNameInRow="MobileNumber" msprop:Generator_ColumnPropNameInTable="MobileNumberColumn" msprop:Generator_UserColumnName="MobileNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="AgentName" msprop:Generator_ColumnVarNameInTable="columnAgentName" msprop:Generator_ColumnPropNameInRow="AgentName" msprop:Generator_ColumnPropNameInTable="AgentNameColumn" msprop:Generator_UserColumnName="AgentName" type="xs:string" minOccurs="0" />
+              <xs:element name="SubAgentName" msprop:Generator_ColumnVarNameInTable="columnSubAgentName" msprop:Generator_ColumnPropNameInRow="SubAgentName" msprop:Generator_ColumnPropNameInTable="SubAgentNameColumn" msprop:Generator_UserColumnName="SubAgentName" type="xs:string" minOccurs="0" />
+              <xs:element name="AgentId" msprop:Generator_ColumnVarNameInTable="columnAgentId" msprop:Generator_ColumnPropNameInRow="AgentId" msprop:Generator_ColumnPropNameInTable="AgentIdColumn" msprop:Generator_UserColumnName="AgentId" type="xs:long" minOccurs="0" />
+              <xs:element name="SubAgentId" msprop:Generator_ColumnVarNameInTable="columnSubAgentId" msprop:Generator_ColumnPropNameInRow="SubAgentId" msprop:Generator_ColumnPropNameInTable="SubAgentIdColumn" msprop:Generator_UserColumnName="SubAgentId" type="xs:long" minOccurs="0" />
+              <xs:element name="ProductType" msprop:Generator_ColumnVarNameInTable="columnProductType" msprop:Generator_ColumnPropNameInRow="ProductType" msprop:Generator_ColumnPropNameInTable="ProductTypeColumn" msprop:Generator_UserColumnName="ProductType" type="xs:string" minOccurs="0" />
+              <xs:element name="Balance" msprop:Generator_ColumnVarNameInTable="columnBalance" msprop:Generator_ColumnPropNameInRow="Balance" msprop:Generator_ColumnPropNameInTable="BalanceColumn" msprop:Generator_UserColumnName="Balance" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

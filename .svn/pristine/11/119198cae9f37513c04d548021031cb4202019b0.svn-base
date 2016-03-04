@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F0E06DC-F910-4B0A-821A-6915B0C4FFCC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MISL.Ababil.Agent.Module.Security</RootNamespace>
+    <AssemblyName>MISL.Ababil.Agent.Module.Security</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Winform.Metroframework.1.4.0\lib\net20\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Winform.Metroframework.Design.1.4.0\lib\net20\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Winform.Metroframework.Fonts.1.4.0\lib\net20\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\BioChangeDto.cs" />
+    <Compile Include="Models\BioDataChangeReqDto.cs" />
+    <Compile Include="Models\BioDataChangeReqSearchDto.cs" />
+    <Compile Include="Models\BioDataChangeReqSearchResultDto.cs" />
+    <Compile Include="Models\BioDataChangeRequestDetail.cs" />
+    <Compile Include="Models\BioDataChangeRequestInfo.cs" />
+    <Compile Include="Models\BioDataChReqOwnerDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\FingerprintManagementService.cs" />
+    <Compile Include="UI\FingerprintUI\frmFingerprintChangeRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FingerprintUI\frmFingerprintChangeRequest.Designer.cs">
+      <DependentUpon>frmFingerprintChangeRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FingerprintUI\frmFingerprintAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FingerprintUI\frmFingerprintAdmin.Designer.cs">
+      <DependentUpon>frmFingerprintAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PasswordResetUI\frmPasswordResetAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PasswordResetUI\frmPasswordResetAdmin.Designer.cs">
+      <DependentUpon>frmPasswordResetAdmin.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataSets\" />
+    <Folder Include="Models\Report\" />
+    <Folder Include="Report\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Resource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\FingerprintUI\frmFingerprintChangeRequest.resx">
+      <DependentUpon>frmFingerprintChangeRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FingerprintUI\frmFingerprintAdmin.resx">
+      <DependentUpon>frmFingerprintAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PasswordResetUI\frmPasswordResetAdmin.resx">
+      <DependentUpon>frmPasswordResetAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Communication\MISL.Ababil.Agent.Communication.csproj">
+      <Project>{4a112df8-0f10-4623-9bfd-6ae95cb009cb}</Project>
+      <Name>MISL.Ababil.Agent.Communication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.CustomControls\MISL.Ababil.Agent.CustomControls.csproj">
+      <Project>{3cf54d1d-f05c-48bb-99fb-ddc564062f7a}</Project>
+      <Name>MISL.Ababil.Agent.CustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Infrastructure\MISL.Ababil.Agent.Infrastructure.csproj">
+      <Project>{235deee9-cf49-4c53-9189-d8c3a8d68b7b}</Project>
+      <Name>MISL.Ababil.Agent.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.LocalStorageService\MISL.Ababil.Agent.LocalStorageService.csproj">
+      <Project>{22f41a2c-ffc7-4897-b712-4ce2e09db9ab}</Project>
+      <Name>MISL.Ababil.Agent.LocalStorageService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Module.Common\MISL.Ababil.Agent.Module.Common.csproj">
+      <Project>{5c34fbb4-8810-4454-b76f-cc460de2d812}</Project>
+      <Name>MISL.Ababil.Agent.Module.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Services.Communication\MISL.Ababil.Agent.Services.Communication.csproj">
+      <Project>{ade922ca-c5e1-4ceb-8535-712610cc8421}</Project>
+      <Name>MISL.Ababil.Agent.Services.Communication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Services\MISL.Ababil.Agent.Services.csproj">
+      <Project>{24b15c56-93e6-48bd-86e0-a825a49004f9}</Project>
+      <Name>MISL.Ababil.Agent.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxBIOPLUGINACTXLib">
+      <Guid>{73308679-FC6B-4482-8AD2-235AA8E75EBB}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="BIOPLUGINACTXLib">
+      <Guid>{73308679-FC6B-4482-8AD2-235AA8E75EBB}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{235DEEE9-CF49-4C53-9189-D8C3A8D68B7B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MISL.Ababil.Agent.Infrastructure</RootNamespace>
+    <AssemblyName>MISL.Ababil.Agent.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behavior\IKycProfileUpdateObserver.cs" />
+    <Compile Include="Behavior\ITransactionProfileUpdateObserver.cs" />
+    <Compile Include="Behavior\ISoftwareUpdateObserver.cs" />
+    <Compile Include="Converter\ByteArrayConverter.cs" />
+    <Compile Include="Mediators\AgentInformationMediator.cs" />
+    <Compile Include="Mediators\MediatorKycAccountOpeningMode.cs" />
+    <Compile Include="Mediators\MediatorKycCashMonthlyTxnAmount.cs" />
+    <Compile Include="Mediators\MediatorKycCashMonthlyTxnNumber.cs" />
+    <Compile Include="Mediators\MediatorKycCustomerTurnover.cs" />
+    <Compile Include="Mediators\MediatorKycMonthTxnAmount.cs" />
+    <Compile Include="Mediators\MediatorKycMonthTxnNumber.cs" />
+    <Compile Include="Models\common\AddressKeys.cs" />
+    <Compile Include="Models\common\ComboboxItem.cs" />
+    <Compile Include="Models\common\DataGridViewDisableButtonColumn.cs" />
+    <Compile Include="Models\common\FormActionType.cs" />
+    <Compile Include="Models\common\IntentType.cs" />
+    <Compile Include="Models\common\LastTransaction.cs" />
+    <Compile Include="Models\common\Packet.cs" />
+    <Compile Include="Models\common\UserBasicInformation.cs" />
+    <Compile Include="Models\common\AgentUserType.cs" />
+    <Compile Include="Models\common\UserBasicInformationDto.cs" />
+    <Compile Include="Models\common\UserStatus.cs" />
+    <Compile Include="Models\common\WaterMarkTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\common\WaterMarkTextBox.Designer.cs">
+      <DependentUpon>WaterMarkTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\domain\models\account\AccountType.cs" />
+    <Compile Include="Models\domain\models\account\DepositAccountCategory.cs" />
+    <Compile Include="Models\domain\models\account\tp\TpMode.cs" />
+    <Compile Include="Models\domain\models\account\tp\TpType.cs" />
+    <Compile Include="Models\domain\models\cis\SectorCodeInfo.cs" />
+    <Compile Include="Models\domain\models\consumer\CustomerApplyDto.cs" />
+    <Compile Include="Models\domain\models\nominee\NomineeInformationTemp.cs" />
+    <Compile Include="Models\domain\models\nominee\NomineeRelationship.cs" />
+    <Compile Include="Models\domain\models\OutletStatus.cs" />
+    <Compile Include="Models\domain\models\ssp\SspAccountInforamtionDto.cs" />
+    <Compile Include="Models\domain\models\termaccount\TermAccountInformation.cs" />
+    <Compile Include="Models\domain\models\termaccount\TermAccountStatus.cs" />
+    <Compile Include="Models\domain\models\termaccount\TermAccountType.cs" />
+    <Compile Include="Models\domain\models\user\LimitUserType.cs" />
+    <Compile Include="Models\dto\AgentBalanceDto.cs" />
+    <Compile Include="Models\dto\AgentBalanceReqDto.cs" />
+    <Compile Include="Models\dto\AgentDayEndSummeryDto.cs" />
+    <Compile Include="Models\dto\AccountMonitoringDto.cs" />
+    <Compile Include="Models\dto\AgentInfoDto.cs" />
+    <Compile Include="Models\dto\AgentServices.cs" />
+    <Compile Include="Models\dto\AgentTransactionMonitoringDto.cs" />
+    <Compile Include="Models\dto\ApplicationStatusChangeDto.cs" />
+    <Compile Include="Models\dto\BillPaymentSlipDto.cs" />
+    <Compile Include="Models\dto\CashFlowType.cs" />
+    <Compile Include="Models\dto\CashRegisterDto.cs" />
+    <Compile Include="Models\common\ActionType.cs" />
+    <Compile Include="Models\common\NotificationType.cs" />
+    <Compile Include="Models\common\Rights.cs" />
+    <Compile Include="Models\common\Roles.cs" />
+    <Compile Include="Models\common\SessionInfo.cs" />
+    <Compile Include="Models\common\UserLoginData.cs" />
+    <Compile Include="Models\common\Utility.cs" />
+    <Compile Include="Models\domain\models\account\AccountDto.cs" />
+    <Compile Include="Models\domain\models\account\AccountInformation.cs" />
+    <Compile Include="Models\domain\models\account\AccountInformationDto.cs" />
+    <Compile Include="Models\domain\models\account\AccountOperators.cs" />
+    <Compile Include="Models\domain\models\account\AccountStatus.cs" />
+    <Compile Include="Models\domain\models\account\AgentProduct.cs" />
+    <Compile Include="Models\domain\models\account\DefaultAccountTypeDefinition.cs" />
+    <Compile Include="Models\domain\models\account\kyc\KycAccountOpeningMode.cs" />
+    <Compile Include="Models\domain\models\account\kyc\KycCashMonthlyTxnAmount.cs" />
+    <Compile Include="Models\domain\models\account\kyc\KycCashMonthlyTxnNumber.cs" />
+    <Compile Include="Models\domain\models\account\kyc\KycCustomerOccupation.cs" />
+    <Compile Include="Models\domain\models\account\kyc\KycCustomerTurnover.cs" />
+    <Compile Include="Models\domain\models\account\kyc\KycMonthTxnAmount.cs" />
+    <Compile Include="Models\domain\models\account\kyc\KycMonthTxnNumber.cs" />
+    <Compile Include="Models\domain\models\account\kyc\KycProfile.cs" />
+    <Compile Include="Models\domain\models\account\NomineeInformation.cs" />
+    <Compile Include="Models\domain\models\account\ProductType.cs" />
+    <Compile Include="Models\domain\models\account\tp\CbsTransactionLimit.cs" />
+    <Compile Include="Models\domain\models\account\tp\CbsTransactionProfile.cs" />
+    <Compile Include="Models\domain\models\account\tp\CbsTxnProfileSet.cs" />
+    <Compile Include="Models\domain\models\account\TransactionProfile.cs" />
+    <Compile Include="Models\domain\models\Address.cs" />
+    <Compile Include="Models\domain\models\agent\AgentCodeGen.cs" />
+    <Compile Include="Models\domain\models\agent\AgentDto.cs" />
+    <Compile Include="Models\domain\models\agent\AgentInformation.cs" />
+    <Compile Include="Models\domain\models\agent\AgentServicesType.cs" />
+    <Compile Include="Models\domain\models\agent\AgentTransactionStatus.cs" />
+    <Compile Include="Models\domain\models\agent\SubAgentInformation.cs" />
+    <Compile Include="Models\domain\models\ApplicationStatus.cs" />
+    <Compile Include="Models\domain\models\ApprovalStatus.cs" />
+    <Compile Include="Models\domain\models\Branch.cs" />
+    <Compile Include="Models\domain\models\cis\CisInstituteType.cs" />
+    <Compile Include="Models\domain\models\cis\CisLocation.cs" />
+    <Compile Include="Models\domain\models\cis\CisOwnerType.cs" />
+    <Compile Include="Models\domain\models\cis\CisType.cs" />
+    <Compile Include="Models\domain\models\cis\CustomerInformation.cs" />
+    <Compile Include="Models\domain\models\cis\IndividualInformation.cs" />
+    <Compile Include="Models\domain\models\cis\OwnerInformation.cs" />
+    <Compile Include="Models\domain\models\CommonAddresses.cs" />
+    <Compile Include="Models\domain\models\consumer\ConsumerApplication.cs" />
+    <Compile Include="Models\domain\models\consumer\ConsumerInformation.cs" />
+    <Compile Include="Models\domain\models\consumer\ConsumerInformationDto.cs" />
+    <Compile Include="Models\domain\models\consumer\ConsumerOperator.cs" />
+    <Compile Include="Models\domain\models\Country.cs" />
+    <Compile Include="Models\domain\models\District.cs" />
+    <Compile Include="Models\domain\models\Division.cs" />
+    <Compile Include="Models\domain\models\documentMgt\Document.cs" />
+    <Compile Include="Models\domain\models\documentMgt\DocumentInfo.cs" />
+    <Compile Include="Models\domain\models\documentMgt\DocumentOwnerType.cs" />
+    <Compile Include="Models\domain\models\documentMgt\DocumentType.cs" />
+    <Compile Include="Models\domain\models\documents\definition\DocPropertyDataType.cs" />
+    <Compile Include="Models\domain\models\documents\definition\DocumentCategory.cs" />
+    <Compile Include="Models\domain\models\documents\definition\DocumentOwnerType.cs" />
+    <Compile Include="Models\domain\models\documents\definition\DocumentPropertyDefinition.cs" />
+    <Compile Include="Models\domain\models\documents\definition\DocumentType.cs" />
+    <Compile Include="Models\domain\models\documents\definition\FileType.cs" />
+    <Compile Include="Models\domain\models\documents\Document.cs" />
+    <Compile Include="Models\domain\models\documents\DocumentInformation.cs" />
+    <Compile Include="Models\domain\models\documents\DocumentPropertyValue.cs" />
+    <Compile Include="Models\domain\models\fingerprint\BiometricTemplate.cs" />
+    <Compile Include="Models\domain\models\fingerprint\FingerData.cs" />
+    <Compile Include="Models\domain\models\Gender.cs" />
+    <Compile Include="Models\domain\models\MaritalStatus.cs" />
+    <Compile Include="Models\domain\models\Occupation.cs" />
+    <Compile Include="Models\domain\models\PostalCode.cs" />
+    <Compile Include="Models\domain\models\Remittance\AccountNature.cs" />
+    <Compile Include="Models\domain\models\Remittance\ExchangeHouse.cs" />
+    <Compile Include="Models\domain\models\Remittance\RemitanceAccountSetup.cs" />
+    <Compile Include="Models\domain\models\Remittance\Remittance.cs" />
+    <Compile Include="Models\domain\models\RemittanceStatus.cs" />
+    <Compile Include="Models\domain\models\ssp\SspAccountInformation.cs" />
+    <Compile Include="Models\domain\models\ssp\SspAccountInformationSearchDto.cs" />
+    <Compile Include="Models\domain\models\ssp\SSPAccountRequest.cs" />
+    <Compile Include="Models\domain\models\ssp\sspaccountstatus.cs" />
+    <Compile Include="Models\domain\models\ssp\SspInstallment.cs" />
+    <Compile Include="Models\domain\models\ssp\SSPInstallmentSize.cs" />
+    <Compile Include="Models\domain\models\ssp\SSPProduct.cs" />
+    <Compile Include="Models\domain\models\ssp\SspProductType.cs" />
+    <Compile Include="Models\domain\models\Thana.cs" />
+    <Compile Include="Models\domain\models\user\AgentUser.cs" />
+    <Compile Include="Models\domain\models\user\BranchUser.cs" />
+    <Compile Include="Models\domain\models\user\SubAgentUser.cs" />
+    <Compile Include="Models\domain\models\user\UserInformation.cs" />
+    <Compile Include="Models\domain\models\user\UserType.cs" />
+    <Compile Include="Models\dto\AccountBlanceDto.cs" />
+    <Compile Include="Models\dto\AccountSearchDto.cs" />
+    <Compile Include="Models\dto\AgentCommissionInfoDto.cs" />
+    <Compile Include="Models\dto\AgentIncomeStatementDto.cs" />
+    <Compile Include="Models\dto\AllApplicationSearchDto.cs" />
+    <Compile Include="Models\dto\BranchDto.cs" />
+    <Compile Include="Models\dto\CashSummaryDto.cs" />
+    <Compile Include="Models\dto\CashTxnDetails.cs" />
+    <Compile Include="Models\dto\CashTxnDetailsReq.cs" />
+    <Compile Include="Models\dto\CommentDto.cs" />
+    <Compile Include="Models\dto\ConsumerApplicationDto.cs" />
+    <Compile Include="Models\dto\ConsumerAppResultDto.cs" />
+    <Compile Include="Models\dto\CustomerAccountDto.cs" />
+    <Compile Include="Models\dto\CustomerDto.cs" />
+    <Compile Include="Models\dto\CustomerInfoDto.cs" />
+    <Compile Include="Models\dto\CustomerSearchDto.cs" />
+    <Compile Include="Models\dto\ExchangeHouseSetupDto.cs" />
+    <Compile Include="Models\dto\OutletBalanceDto.cs" />
+    <Compile Include="Models\dto\OutletCashSummaryDto.cs" />
+    <Compile Include="Models\dto\OutletCashSumReqDto.cs" />
+    <Compile Include="Models\dto\passwordChangeInfo.cs" />
+    <Compile Include="Models\dto\RemittanceDto.cs" />
+    <Compile Include="Models\dto\RemittanceSearchDto .cs" />
+    <Compile Include="Models\dto\SspAccountSearchDto.cs" />
+    <Compile Include="Models\dto\SubAgentInfoDto.cs" />
+    <Compile Include="Models\dto\TermAccountRequestDto.cs" />
+    <Compile Include="Models\dto\TermAccountSearchDto.cs" />
+    <Compile Include="Models\dto\TermAccountSearchResultDto.cs" />
+    <Compile Include="Models\dto\TransactionProfileDto.cs" />
+    <Compile Include="Models\dto\TransactionRecordSerchDto.cs" />
+    <Compile Include="Models\dto\TransactionReportSearchDto.cs" />
+    <Compile Include="Models\exceptions\ChargeManagementFailedException.cs" />
+    <Compile Include="Models\exceptions\LimitManagementException.cs" />
+    <Compile Include="Models\exceptions\ReportIOException.cs" />
+    <Compile Include="Models\menu\MislbdMenu.cs" />
+    <Compile Include="Models\menu\MislbdMenuAction.cs" />
+    <Compile Include="Models\menu\MislbdMenuGroup .cs" />
+    <Compile Include="Models\menu\MislbdMenuType.cs" />
+    <Compile Include="Models\models\transaction\BillPaymentRequestDto.cs" />
+    <Compile Include="Models\models\transaction\BillServiceProvider.cs" />
+    <Compile Include="Models\models\transaction\CashInfoDetailsDto.cs" />
+    <Compile Include="Models\models\transaction\CashInformationDto.cs" />
+    <Compile Include="Models\models\transaction\CashInRequest.cs" />
+    <Compile Include="Models\models\transaction\CashOutRequest.cs" />
+    <Compile Include="Models\models\transaction\BalanceInquiryRequest.cs" />
+    <Compile Include="Models\models\transaction\ChargeAmountType.cs" />
+    <Compile Include="Models\models\transaction\ChargeCalculationRequest.cs" />
+    <Compile Include="Models\models\transaction\FundTransferRequest.cs" />
+    <Compile Include="Models\models\transaction\MinistatementRequest.cs" />
+    <Compile Include="Models\models\transaction\OutletCashTransactionRegister.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\models\transaction\PaymentType.cs" />
+    <Compile Include="Models\models\transaction\RemittanceDisburseRequest.cs" />
+    <Compile Include="Models\models\transaction\TransactionDetail.cs" />
+    <Compile Include="Models\models\transaction\TransactionPurpose.cs" />
+    <Compile Include="Models\models\transaction\TransactionRecord.cs" />
+    <Compile Include="Models\models\transaction\TransactionRequest.cs" />
+    <Compile Include="Models\models\transaction\TransactionType.cs" />
+    <Compile Include="Models\reports\AgentReportDto.cs" />
+    <Compile Include="Models\reports\ApprovedConsumerAppReportDto.cs" />
+    <Compile Include="Models\reports\BillPaymentReportDto .cs" />
+    <Compile Include="Models\reports\BillPaymentSearchDto.cs" />
+    <Compile Include="Models\reports\BillPaymentSearchResultDto.cs" />
+    <Compile Include="Models\reports\CashwithdrawlReportDto .cs" />
+    <Compile Include="Models\reports\ConsumerApplicationReportDTO.cs" />
+    <Compile Include="Models\reports\DailyTrnRecordSearchDto.cs" />
+    <Compile Include="Models\reports\DepositReportDto .cs" />
+    <Compile Include="Models\reports\MTDPaySlipDto.cs" />
+    <Compile Include="Models\reports\OutletReportDto.cs" />
+    <Compile Include="Models\reports\OutletReportSearchDto.cs" />
+    <Compile Include="Models\reports\OutletUserInfoReportResultDto.cs" />
+    <Compile Include="Models\reports\OutletUserInfoReportSearchDto.cs" />
+    <Compile Include="Models\reports\RemittanceDtoForRpt.cs" />
+    <Compile Include="Models\reports\RemittanceReportDto.cs" />
+    <Compile Include="Models\reports\ReportHeaders.cs" />
+    <Compile Include="Models\reports\SspSlipDto.cs" />
+    <Compile Include="Models\reports\TransactionReportDto.cs" />
+    <Compile Include="Models\reports\TransactionReportResultDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceResult.cs" />
+    <Compile Include="StringTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringTable.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Synchronization\ISynchronizable.cs" />
+    <Compile Include="Synchronization\SynchronizationEngine.cs" />
+    <Compile Include="Synchronization\SynchronizationInterval.cs" />
+    <Compile Include="Synchronization\SynchronizationParameters.cs" />
+    <Compile Include="Synchronization\SynchronizationType.cs" />
+    <Compile Include="Validation\ValidationManager.cs" />
+    <Compile Include="Validation\ValidationType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StringTable.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringTable.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

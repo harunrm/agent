@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C34FBB4-8810-4454-B76F-CC460DE2D812}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MISL.Ababil.Agent.Module.Common</RootNamespace>
+    <AssemblyName>MISL.Ababil.Agent.Module.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Winform.Metroframework.1.4.0\lib\net20\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Winform.Metroframework.Design.1.4.0\lib\net20\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Winform.Metroframework.Fonts.1.4.0\lib\net20\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\SubagentList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\CommentService.cs" />
+    <Compile Include="Service\TransactionSafetyCommonService.cs" />
+    <Compile Include="UI\CommentUI\CommentItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CommentUI\CommentItem.Designer.cs">
+      <DependentUpon>CommentItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CommentUI\frmCommentUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CommentUI\frmCommentUI.Designer.cs">
+      <DependentUpon>frmCommentUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DocumentUI\frmDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DocumentUI\frmDocument.Designer.cs">
+      <DependentUpon>frmDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DocumentUI\frmDocumentZoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DocumentUI\frmDocumentZoom.Designer.cs">
+      <DependentUpon>frmDocumentZoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FingerprintUI\frmFingerprintCapture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FingerprintUI\frmFingerprintCapture.designer.cs">
+      <DependentUpon>frmFingerprintCapture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GUI.cs" />
+    <Compile Include="UI\GUIValidation.cs" />
+    <Compile Include="UI\IndividualInformationUI\frmIndividualInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\IndividualInformationUI\frmIndividualInformation.Designer.cs">
+      <DependentUpon>frmIndividualInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MessageUI\frmMessageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MessageUI\frmMessageUI.Designer.cs">
+      <DependentUpon>frmMessageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MessageUI\MsgBox.cs" />
+    <Compile Include="UI\ProgressUI\frmProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProgressUI\frmProgress.Designer.cs">
+      <DependentUpon>frmProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProgressUI\ProgressUIManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CommentUI\CommentItem.resx">
+      <DependentUpon>CommentItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CommentUI\frmCommentUI.resx">
+      <DependentUpon>frmCommentUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DocumentUI\frmDocument.resx">
+      <DependentUpon>frmDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DocumentUI\frmDocumentZoom.resx">
+      <DependentUpon>frmDocumentZoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FingerprintUI\frmFingerprintCapture.resx">
+      <DependentUpon>frmFingerprintCapture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\IndividualInformationUI\frmIndividualInformation.resx">
+      <DependentUpon>frmIndividualInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MessageUI\frmMessageUI.resx">
+      <DependentUpon>frmMessageUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProgressUI\frmProgress.resx">
+      <DependentUpon>frmProgress.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\err.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Communication\MISL.Ababil.Agent.Communication.csproj">
+      <Project>{4a112df8-0f10-4623-9bfd-6ae95cb009cb}</Project>
+      <Name>MISL.Ababil.Agent.Communication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.CustomControls\MISL.Ababil.Agent.CustomControls.csproj">
+      <Project>{3cf54d1d-f05c-48bb-99fb-ddc564062f7a}</Project>
+      <Name>MISL.Ababil.Agent.CustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Infrastructure\MISL.Ababil.Agent.Infrastructure.csproj">
+      <Project>{235deee9-cf49-4c53-9189-d8c3a8d68b7b}</Project>
+      <Name>MISL.Ababil.Agent.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.LocalStorageService\MISL.Ababil.Agent.LocalStorageService.csproj">
+      <Project>{22f41a2c-ffc7-4897-b712-4ce2e09db9ab}</Project>
+      <Name>MISL.Ababil.Agent.LocalStorageService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MISL.Ababil.Agent.Services\MISL.Ababil.Agent.Services.csproj">
+      <Project>{24b15c56-93e6-48bd-86e0-a825a49004f9}</Project>
+      <Name>MISL.Ababil.Agent.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxBIOPLUGINACTXLib">
+      <Guid>{73308679-FC6B-4482-8AD2-235AA8E75EBB}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="BIOPLUGINACTXLib">
+      <Guid>{73308679-FC6B-4482-8AD2-235AA8E75EBB}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-index.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-index-c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-middle-c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-pinky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-pinky-c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-ring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-ring-c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-thumb-c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-index.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-index-c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-middle-c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-pinky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-pinky-c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-ring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-ring-c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-thumb-c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

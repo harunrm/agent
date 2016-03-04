@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AgentIncomeReportDS" targetNamespace="http://tempuri.org/AgentIncomeReportDS.xsd" xmlns:mstns="http://tempuri.org/AgentIncomeReportDS.xsd" xmlns="http://tempuri.org/AgentIncomeReportDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AgentIncomeReportDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AgentIncomeReportDS" msprop:Generator_UserDSName="AgentIncomeReportDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AgentIncomeReportDT" msprop:Generator_TableClassName="AgentIncomeReportDTDataTable" msprop:Generator_TableVarName="tableAgentIncomeReportDT" msprop:Generator_RowChangedName="AgentIncomeReportDTRowChanged" msprop:Generator_TablePropName="AgentIncomeReportDT" msprop:Generator_RowDeletingName="AgentIncomeReportDTRowDeleting" msprop:Generator_RowChangingName="AgentIncomeReportDTRowChanging" msprop:Generator_RowEvHandlerName="AgentIncomeReportDTRowChangeEventHandler" msprop:Generator_RowDeletedName="AgentIncomeReportDTRowDeleted" msprop:Generator_RowClassName="AgentIncomeReportDTRow" msprop:Generator_UserTableName="AgentIncomeReportDT" msprop:Generator_RowEvArgName="AgentIncomeReportDTRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="agentName" msprop:Generator_ColumnVarNameInTable="columnagentName" msprop:Generator_ColumnPropNameInRow="agentName" msprop:Generator_ColumnPropNameInTable="agentNameColumn" msprop:Generator_UserColumnName="agentName" type="xs:string" minOccurs="0" />
+              <xs:element name="outlateName" msprop:Generator_ColumnVarNameInTable="columnoutlateName" msprop:Generator_ColumnPropNameInRow="outlateName" msprop:Generator_ColumnPropNameInTable="outlateNameColumn" msprop:Generator_UserColumnName="outlateName" type="xs:string" minOccurs="0" />
+              <xs:element name="agentService" msprop:Generator_ColumnVarNameInTable="columnagentService" msprop:Generator_ColumnPropNameInRow="agentService" msprop:Generator_ColumnPropNameInTable="agentServiceColumn" msprop:Generator_UserColumnName="agentService" type="xs:string" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="transactionCommission" msprop:Generator_ColumnVarNameInTable="columntransactionCommission" msprop:Generator_ColumnPropNameInRow="transactionCommission" msprop:Generator_ColumnPropNameInTable="transactionCommissionColumn" msprop:Generator_UserColumnName="transactionCommission" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remittanceCommission" msprop:Generator_ColumnVarNameInTable="columnremittanceCommission" msprop:Generator_ColumnPropNameInRow="remittanceCommission" msprop:Generator_ColumnPropNameInTable="remittanceCommissionColumn" msprop:Generator_UserColumnName="remittanceCommission" type="xs:decimal" minOccurs="0" />
+              <xs:element name="utilityBillCommission" msprop:Generator_ColumnVarNameInTable="columnutilityBillCommission" msprop:Generator_ColumnPropNameInRow="utilityBillCommission" msprop:Generator_ColumnPropNameInTable="utilityBillCommissionColumn" msprop:Generator_UserColumnName="utilityBillCommission" type="xs:decimal" minOccurs="0" />
+              <xs:element name="repaymentRecoverCharge" msprop:Generator_ColumnVarNameInTable="columnrepaymentRecoverCharge" msprop:Generator_ColumnPropNameInRow="repaymentRecoverCharge" msprop:Generator_ColumnPropNameInTable="repaymentRecoverChargeColumn" msprop:Generator_UserColumnName="repaymentRecoverCharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="loanDisbursmentCharge" msprop:Generator_ColumnVarNameInTable="columnloanDisbursmentCharge" msprop:Generator_ColumnPropNameInRow="loanDisbursmentCharge" msprop:Generator_ColumnPropNameInTable="loanDisbursmentChargeColumn" msprop:Generator_UserColumnName="loanDisbursmentCharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="accMaintainCharge" msprop:Generator_ColumnVarNameInTable="columnaccMaintainCharge" msprop:Generator_ColumnPropNameInRow="accMaintainCharge" msprop:Generator_ColumnPropNameInTable="accMaintainChargeColumn" msprop:Generator_UserColumnName="accMaintainCharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="passportFeeCollectionComm" msprop:Generator_ColumnVarNameInTable="columnpassportFeeCollectionComm" msprop:Generator_ColumnPropNameInRow="passportFeeCollectionComm" msprop:Generator_ColumnPropNameInTable="passportFeeCollectionCommColumn" msprop:Generator_UserColumnName="passportFeeCollectionComm" type="xs:decimal" minOccurs="0" />
+              <xs:element name="floatSharingCharge" msprop:Generator_ColumnVarNameInTable="columnfloatSharingCharge" msprop:Generator_ColumnPropNameInRow="floatSharingCharge" msprop:Generator_ColumnPropNameInTable="floatSharingChargeColumn" msprop:Generator_UserColumnName="floatSharingCharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="debitCardCharge" msprop:Generator_ColumnVarNameInTable="columndebitCardCharge" msprop:Generator_ColumnPropNameInRow="debitCardCharge" msprop:Generator_ColumnPropNameInTable="debitCardChargeColumn" msprop:Generator_UserColumnName="debitCardCharge" type="xs:string" minOccurs="0" />
+              <xs:element name="vatInPercent" msprop:Generator_ColumnVarNameInTable="columnvatInPercent" msprop:Generator_ColumnPropNameInRow="vatInPercent" msprop:Generator_ColumnPropNameInTable="vatInPercentColumn" msprop:Generator_UserColumnName="vatInPercent" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

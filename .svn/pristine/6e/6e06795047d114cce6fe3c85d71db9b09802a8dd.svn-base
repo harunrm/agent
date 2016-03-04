@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OutletCashDetailsDS" targetNamespace="http://tempuri.org/OutletCashDetailsDS.xsd" xmlns:mstns="http://tempuri.org/OutletCashDetailsDS.xsd" xmlns="http://tempuri.org/OutletCashDetailsDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OutletCashDetailsDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="OutletCashDetailsDS" msprop:Generator_UserDSName="OutletCashDetailsDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OutletCashDetailsDT" msprop:Generator_TableClassName="OutletCashDetailsDTDataTable" msprop:Generator_TableVarName="tableOutletCashDetailsDT" msprop:Generator_TablePropName="OutletCashDetailsDT" msprop:Generator_RowDeletingName="OutletCashDetailsDTRowDeleting" msprop:Generator_RowChangingName="OutletCashDetailsDTRowChanging" msprop:Generator_RowEvHandlerName="OutletCashDetailsDTRowChangeEventHandler" msprop:Generator_RowDeletedName="OutletCashDetailsDTRowDeleted" msprop:Generator_UserTableName="OutletCashDetailsDT" msprop:Generator_RowChangedName="OutletCashDetailsDTRowChanged" msprop:Generator_RowEvArgName="OutletCashDetailsDTRowChangeEvent" msprop:Generator_RowClassName="OutletCashDetailsDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="txnTime" msprop:Generator_ColumnVarNameInTable="columntxnTime" msprop:Generator_ColumnPropNameInRow="txnTime" msprop:Generator_ColumnPropNameInTable="txnTimeColumn" msprop:Generator_UserColumnName="txnTime" type="xs:string" minOccurs="0" />
+              <xs:element name="txnUser" msprop:Generator_ColumnVarNameInTable="columntxnUser" msprop:Generator_ColumnPropNameInRow="txnUser" msprop:Generator_ColumnPropNameInTable="txnUserColumn" msprop:Generator_UserColumnName="txnUser" type="xs:string" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="txnNo" msprop:Generator_ColumnVarNameInTable="columntxnNo" msprop:Generator_ColumnPropNameInRow="txnNo" msprop:Generator_ColumnPropNameInTable="txnNoColumn" msprop:Generator_UserColumnName="txnNo" type="xs:long" minOccurs="0" />
+              <xs:element name="isSystemTxn" msprop:Generator_ColumnVarNameInTable="columnisSystemTxn" msprop:Generator_ColumnPropNameInRow="isSystemTxn" msprop:Generator_ColumnPropNameInTable="isSystemTxnColumn" msprop:Generator_UserColumnName="isSystemTxn" type="xs:string" minOccurs="0" />
+              <xs:element name="cashFlowType" msprop:Generator_ColumnVarNameInTable="columncashFlowType" msprop:Generator_ColumnPropNameInRow="cashFlowType" msprop:Generator_ColumnPropNameInTable="cashFlowTypeColumn" msprop:Generator_UserColumnName="cashFlowType" type="xs:string" minOccurs="0" />
+              <xs:element name="category" msprop:Generator_ColumnVarNameInTable="columncategory" msprop:Generator_ColumnPropNameInRow="category" msprop:Generator_ColumnPropNameInTable="categoryColumn" msprop:Generator_UserColumnName="category" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

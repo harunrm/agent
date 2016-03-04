@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AgentCashInformationDS" targetNamespace="http://tempuri.org/AgentCashInformationDS.xsd" xmlns:mstns="http://tempuri.org/AgentCashInformationDS.xsd" xmlns="http://tempuri.org/AgentCashInformationDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AgentCashInformationDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AgentCashInformationDS" msprop:Generator_UserDSName="AgentCashInformationDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AgentCashInfoDT" msprop:Generator_TableClassName="AgentCashInfoDTDataTable" msprop:Generator_TableVarName="tableAgentCashInfoDT" msprop:Generator_TablePropName="AgentCashInfoDT" msprop:Generator_RowDeletingName="AgentCashInfoDTRowDeleting" msprop:Generator_RowChangingName="AgentCashInfoDTRowChanging" msprop:Generator_RowEvHandlerName="AgentCashInfoDTRowChangeEventHandler" msprop:Generator_RowDeletedName="AgentCashInfoDTRowDeleted" msprop:Generator_UserTableName="AgentCashInfoDT" msprop:Generator_RowChangedName="AgentCashInfoDTRowChanged" msprop:Generator_RowEvArgName="AgentCashInfoDTRowChangeEvent" msprop:Generator_RowClassName="AgentCashInfoDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:long" minOccurs="0" />
+              <xs:element name="agentCode" msprop:Generator_ColumnVarNameInTable="columnagentCode" msprop:Generator_ColumnPropNameInRow="agentCode" msprop:Generator_ColumnPropNameInTable="agentCodeColumn" msprop:Generator_UserColumnName="agentCode" type="xs:string" minOccurs="0" />
+              <xs:element name="businessName" msprop:Generator_ColumnVarNameInTable="columnbusinessName" msprop:Generator_ColumnPropNameInRow="businessName" msprop:Generator_ColumnPropNameInTable="businessNameColumn" msprop:Generator_UserColumnName="businessName" type="xs:string" minOccurs="0" />
+              <xs:element name="contactNo" msprop:Generator_ColumnVarNameInTable="columncontactNo" msprop:Generator_ColumnPropNameInRow="contactNo" msprop:Generator_ColumnPropNameInTable="contactNoColumn" msprop:Generator_UserColumnName="contactNo" type="xs:string" minOccurs="0" />
+              <xs:element name="accountNo" msprop:Generator_ColumnVarNameInTable="columnaccountNo" msprop:Generator_ColumnPropNameInRow="accountNo" msprop:Generator_ColumnPropNameInTable="accountNoColumn" msprop:Generator_UserColumnName="accountNo" type="xs:string" minOccurs="0" />
+              <xs:element name="accountBalance" msprop:Generator_ColumnVarNameInTable="columnaccountBalance" msprop:Generator_ColumnPropNameInRow="accountBalance" msprop:Generator_ColumnPropNameInTable="accountBalanceColumn" msprop:Generator_UserColumnName="accountBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="subAgentCode" msprop:Generator_ColumnVarNameInTable="columnsubAgentCode" msprop:Generator_ColumnPropNameInRow="subAgentCode" msprop:Generator_ColumnPropNameInTable="subAgentCodeColumn" msprop:Generator_UserColumnName="subAgentCode" type="xs:string" minOccurs="0" />
+              <xs:element name="businessAddress" msprop:Generator_ColumnVarNameInTable="columnbusinessAddress" msprop:Generator_ColumnPropNameInRow="businessAddress" msprop:Generator_ColumnPropNameInTable="businessAddressColumn" msprop:Generator_UserColumnName="businessAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="mobleNumber" msprop:Generator_ColumnVarNameInTable="columnmobleNumber" msprop:Generator_ColumnPropNameInRow="mobleNumber" msprop:Generator_ColumnPropNameInTable="mobleNumberColumn" msprop:Generator_UserColumnName="mobleNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="currentBalance" msprop:Generator_ColumnVarNameInTable="columncurrentBalance" msprop:Generator_ColumnPropNameInRow="currentBalance" msprop:Generator_ColumnPropNameInTable="currentBalanceColumn" msprop:Generator_UserColumnName="currentBalance" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

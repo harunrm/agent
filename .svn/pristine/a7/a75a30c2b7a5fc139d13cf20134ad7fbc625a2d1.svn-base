@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using MISL.Ababil.Agent.Infrastructure.Models.models.transaction;
+
+namespace MISL.Ababil.Agent.Infrastructure.Models.reports
+{
+     public class OutletUserInfoReportResultDto
+    {
+        public string userId { get; set; }
+        public string userName { get; set; }
+        public string userStatus { get; set; }
+        public DateTime? creationDate { get; set; }
+        public string contactNo { get; set; }
+        public Decimal? creditLimit { get; set; }
+        public Decimal? debitLimit { get; set; }
+        
+    }
+}

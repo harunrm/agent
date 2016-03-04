@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationLauncher", "ApplicationLauncher\ApplicationLauncher.csproj", "{B0CD16C2-F8C5-4442-8CDC-F2B58F380A41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISL.Ababil.Agent.UI", "MISL.Ababil.Agent.UI\MISL.Ababil.Agent.UI.csproj", "{F80651AA-452C-4997-A22A-34C5CB6221E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityMonitor", "ActivityMonitor\ActivityMonitor.csproj", "{29D1FBA6-0ECE-42F2-B323-1E0ADC3C0FA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISL.Ababil.Agent.Services", "MISL.Ababil.Agent.Services\MISL.Ababil.Agent.Services.csproj", "{24B15C56-93E6-48BD-86E0-A825A49004F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISL.Ababil.Agent.Communication", "MISL.Ababil.Agent.Communication\MISL.Ababil.Agent.Communication.csproj", "{4A112DF8-0F10-4623-9BFD-6AE95CB009CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISL.Ababil.Agent.Infrastructure", "MISL.Ababil.Agent.Infrastructure\MISL.Ababil.Agent.Infrastructure.csproj", "{235DEEE9-CF49-4C53-9189-D8C3A8D68B7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISL.Ababil.Agent.Report", "MISL.Ababil.Agent.Report\MISL.Ababil.Agent.Report.csproj", "{78F58AAC-36E4-4B75-89D9-43D41EBF81A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISL.Ababil.Agent.LocalStorageService", "MISL.Ababil.Agent.LocalStorageService\MISL.Ababil.Agent.LocalStorageService.csproj", "{22F41A2C-FFC7-4897-B712-4CE2E09DB9AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISL.Ababil.Agent.CustomControls", "MISL.Ababil.Agent.CustomControls\MISL.Ababil.Agent.CustomControls.csproj", "{3CF54D1D-F05C-48BB-99FB-DDC564062F7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISL.Ababil.Agent.Module.ChequeRequisition", "MISL.Ababil.Agent.Module.ChequeRequisition\MISL.Ababil.Agent.Module.ChequeRequisition.csproj", "{A2D9A5B9-4C3F-4E43-9044-31D377185201}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISL.Ababil.Agent.Module.Common", "MISL.Ababil.Agent.Module.Common\MISL.Ababil.Agent.Module.Common.csproj", "{5C34FBB4-8810-4454-B76F-CC460DE2D812}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISL.Ababil.Agent.Services.Communication", "MISL.Ababil.Agent.Services.Communication\MISL.Ababil.Agent.Services.Communication.csproj", "{ADE922CA-C5E1-4CEB-8535-712610CC8421}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISL.Ababil.Agent.Module.Security", "MISL.Ababil.Agent.Module.Security\MISL.Ababil.Agent.Module.Security.csproj", "{3F0E06DC-F910-4B0A-821A-6915B0C4FFCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0CD16C2-F8C5-4442-8CDC-F2B58F380A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0CD16C2-F8C5-4442-8CDC-F2B58F380A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0CD16C2-F8C5-4442-8CDC-F2B58F380A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0CD16C2-F8C5-4442-8CDC-F2B58F380A41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F80651AA-452C-4997-A22A-34C5CB6221E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F80651AA-452C-4997-A22A-34C5CB6221E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F80651AA-452C-4997-A22A-34C5CB6221E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F80651AA-452C-4997-A22A-34C5CB6221E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D1FBA6-0ECE-42F2-B323-1E0ADC3C0FA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D1FBA6-0ECE-42F2-B323-1E0ADC3C0FA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D1FBA6-0ECE-42F2-B323-1E0ADC3C0FA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D1FBA6-0ECE-42F2-B323-1E0ADC3C0FA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24B15C56-93E6-48BD-86E0-A825A49004F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24B15C56-93E6-48BD-86E0-A825A49004F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24B15C56-93E6-48BD-86E0-A825A49004F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24B15C56-93E6-48BD-86E0-A825A49004F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A112DF8-0F10-4623-9BFD-6AE95CB009CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A112DF8-0F10-4623-9BFD-6AE95CB009CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A112DF8-0F10-4623-9BFD-6AE95CB009CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A112DF8-0F10-4623-9BFD-6AE95CB009CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{235DEEE9-CF49-4C53-9189-D8C3A8D68B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{235DEEE9-CF49-4C53-9189-D8C3A8D68B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{235DEEE9-CF49-4C53-9189-D8C3A8D68B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{235DEEE9-CF49-4C53-9189-D8C3A8D68B7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78F58AAC-36E4-4B75-89D9-43D41EBF81A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78F58AAC-36E4-4B75-89D9-43D41EBF81A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78F58AAC-36E4-4B75-89D9-43D41EBF81A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78F58AAC-36E4-4B75-89D9-43D41EBF81A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22F41A2C-FFC7-4897-B712-4CE2E09DB9AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22F41A2C-FFC7-4897-B712-4CE2E09DB9AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22F41A2C-FFC7-4897-B712-4CE2E09DB9AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22F41A2C-FFC7-4897-B712-4CE2E09DB9AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF54D1D-F05C-48BB-99FB-DDC564062F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF54D1D-F05C-48BB-99FB-DDC564062F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF54D1D-F05C-48BB-99FB-DDC564062F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF54D1D-F05C-48BB-99FB-DDC564062F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2D9A5B9-4C3F-4E43-9044-31D377185201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2D9A5B9-4C3F-4E43-9044-31D377185201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2D9A5B9-4C3F-4E43-9044-31D377185201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2D9A5B9-4C3F-4E43-9044-31D377185201}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C34FBB4-8810-4454-B76F-CC460DE2D812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C34FBB4-8810-4454-B76F-CC460DE2D812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C34FBB4-8810-4454-B76F-CC460DE2D812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C34FBB4-8810-4454-B76F-CC460DE2D812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADE922CA-C5E1-4CEB-8535-712610CC8421}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE922CA-C5E1-4CEB-8535-712610CC8421}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE922CA-C5E1-4CEB-8535-712610CC8421}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE922CA-C5E1-4CEB-8535-712610CC8421}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F0E06DC-F910-4B0A-821A-6915B0C4FFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F0E06DC-F910-4B0A-821A-6915B0C4FFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F0E06DC-F910-4B0A-821A-6915B0C4FFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F0E06DC-F910-4B0A-821A-6915B0C4FFCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal
